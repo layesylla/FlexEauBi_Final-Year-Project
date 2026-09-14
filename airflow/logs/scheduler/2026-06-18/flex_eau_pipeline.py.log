@@ -1,0 +1,151 @@
+[2026-06-18T23:37:19.275+0000] {processor.py:186} INFO - Started process (PID=165) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:37:19.278+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:37:19.305+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:37:19.301+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:37:19.473+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:37:20.272+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:37:20.271+0000] {override.py:1858} INFO - Created Permission View: can edit on DAG:flex_eau_pipeline
+[2026-06-18T23:37:20.298+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:37:20.297+0000] {override.py:1858} INFO - Created Permission View: can delete on DAG:flex_eau_pipeline
+[2026-06-18T23:37:20.307+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:37:20.307+0000] {override.py:1858} INFO - Created Permission View: can read on DAG:flex_eau_pipeline
+[2026-06-18T23:37:20.308+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:37:20.308+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:37:20.342+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:37:20.342+0000] {dag.py:3234} INFO - Creating ORM DAG for flex_eau_pipeline
+[2026-06-18T23:37:20.345+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:37:20.344+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:37:20.386+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 1.150 seconds
+[2026-06-18T23:37:50.581+0000] {processor.py:186} INFO - Started process (PID=170) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:37:50.583+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:37:50.586+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:37:50.586+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:37:50.619+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:37:50.659+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:37:50.659+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:37:50.677+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:37:50.676+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:37:50.704+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.134 seconds
+[2026-06-18T23:38:20.788+0000] {processor.py:186} INFO - Started process (PID=175) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:38:20.789+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:38:20.794+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:38:20.793+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:38:20.824+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:38:20.865+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:38:20.864+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:38:20.884+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:38:20.884+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:38:20.907+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.130 seconds
+[2026-06-18T23:38:51.086+0000] {processor.py:186} INFO - Started process (PID=180) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:38:51.087+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:38:51.091+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:38:51.091+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:38:51.123+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:38:51.161+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:38:51.161+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:38:51.180+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:38:51.180+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:38:51.206+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.128 seconds
+[2026-06-18T23:39:21.360+0000] {processor.py:186} INFO - Started process (PID=190) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:39:21.362+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:39:21.365+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:39:21.364+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:39:21.392+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:39:21.427+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:39:21.426+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:39:21.443+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:39:21.443+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:39:21.472+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.118 seconds
+[2026-06-18T23:39:51.620+0000] {processor.py:186} INFO - Started process (PID=195) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:39:51.622+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:39:51.627+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:39:51.627+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:39:51.667+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:39:51.723+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:39:51.722+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:39:51.747+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:39:51.747+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:39:51.796+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.189 seconds
+[2026-06-18T23:40:22.092+0000] {processor.py:186} INFO - Started process (PID=200) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:40:22.094+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:40:22.098+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:40:22.097+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:40:22.124+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:40:22.168+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:40:22.168+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:40:22.186+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:40:22.186+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:40:22.218+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.133 seconds
+[2026-06-18T23:40:52.441+0000] {processor.py:186} INFO - Started process (PID=210) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:40:52.442+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:40:52.445+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:40:52.445+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:40:52.472+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:40:52.505+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:40:52.505+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:40:52.521+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:40:52.521+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:40:52.550+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.116 seconds
+[2026-06-18T23:41:22.715+0000] {processor.py:186} INFO - Started process (PID=215) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:41:22.717+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:41:22.720+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:41:22.720+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:41:22.751+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:41:22.794+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:41:22.793+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:41:22.812+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:41:22.812+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:41:22.836+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.135 seconds
+[2026-06-18T23:41:53.060+0000] {processor.py:186} INFO - Started process (PID=220) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:41:53.062+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:41:53.065+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:41:53.065+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:41:53.096+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:41:53.137+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:41:53.136+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:41:53.156+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:41:53.155+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:41:53.181+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.133 seconds
+[2026-06-18T23:42:23.314+0000] {processor.py:186} INFO - Started process (PID=225) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:42:23.316+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:42:23.320+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:42:23.320+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:42:23.347+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:42:23.390+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:42:23.389+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:42:23.410+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:42:23.410+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:42:23.435+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.129 seconds
+[2026-06-18T23:42:36.373+0000] {processor.py:186} INFO - Started process (PID=230) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:42:36.374+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:42:36.377+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:42:36.377+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:42:36.415+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:42:37.318+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:42:37.318+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:42:37.333+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:42:37.332+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:42:37.361+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.996 seconds
+[2026-06-18T23:43:07.554+0000] {processor.py:186} INFO - Started process (PID=235) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:43:07.556+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:43:07.560+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:43:07.559+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:43:07.592+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:43:07.638+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:43:07.638+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:43:07.661+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:43:07.661+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:43:07.692+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.147 seconds
+[2026-06-18T23:43:37.851+0000] {processor.py:186} INFO - Started process (PID=240) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:43:37.852+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:43:37.855+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:43:37.855+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:43:37.879+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:43:37.919+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:43:37.919+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:43:37.936+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:43:37.936+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:43:37.959+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.117 seconds
+[2026-06-18T23:44:05.171+0000] {processor.py:186} INFO - Started process (PID=245) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:44:05.172+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:44:05.178+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:44:05.178+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:44:05.234+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:44:05.269+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:44:05.268+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:44:05.287+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:44:05.286+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:44:05.321+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.161 seconds
+[2026-06-18T23:44:35.502+0000] {processor.py:186} INFO - Started process (PID=260) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:44:35.504+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:44:35.510+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:44:35.510+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:44:35.539+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:44:35.586+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:44:35.585+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:44:35.609+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:44:35.609+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:44:35.636+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.145 seconds
+[2026-06-18T23:45:06.433+0000] {processor.py:186} INFO - Started process (PID=265) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:45:06.435+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:45:06.440+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:45:06.439+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:45:06.476+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:45:06.518+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:45:06.518+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:45:06.538+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:45:06.537+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:45:06.564+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.144 seconds
+[2026-06-18T23:45:32.608+0000] {processor.py:186} INFO - Started process (PID=270) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:45:32.609+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:45:32.613+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:45:32.613+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:45:32.649+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:45:33.030+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:45:33.029+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:45:33.044+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:45:33.044+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:45:33.075+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.475 seconds
+[2026-06-18T23:46:03.303+0000] {processor.py:186} INFO - Started process (PID=280) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:46:03.304+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:46:03.308+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:46:03.308+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:46:03.341+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:46:03.381+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:46:03.381+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:46:03.402+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:46:03.402+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:46:03.428+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.136 seconds
+[2026-06-18T23:46:34.398+0000] {processor.py:186} INFO - Started process (PID=285) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:46:34.400+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:46:34.404+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:46:34.403+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:46:34.433+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:46:34.477+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:46:34.477+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:46:34.498+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:46:34.498+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:46:34.576+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.190 seconds
+[2026-06-18T23:47:04.853+0000] {processor.py:186} INFO - Started process (PID=290) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:47:04.855+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-18T23:47:04.858+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:47:04.858+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:47:04.925+0000] {processor.py:925} INFO - DAG(s) 'flex_eau_pipeline' retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-18T23:47:04.986+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:47:04.986+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2026-06-18T23:47:05.027+0000] {logging_mixin.py:190} INFO - [2026-06-18T23:47:05.026+0000] {dag.py:4138} INFO - Setting next_dagrun for flex_eau_pipeline to None, run_after=None
+[2026-06-18T23:47:05.059+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.215 seconds

@@ -1,0 +1,47 @@
+[2026-07-26T00:01:20.938+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-26T00:01:21.027+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flex_eau_pipeline.dim_date scheduled__2026-07-25T00:00:00+00:00 [queued]>
+[2026-07-26T00:01:21.063+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flex_eau_pipeline.dim_date scheduled__2026-07-25T00:00:00+00:00 [queued]>
+[2026-07-26T00:01:21.064+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2026-07-26T00:01:21.115+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): dim_date> on 2026-07-25 00:00:00+00:00
+[2026-07-26T00:01:21.142+0000] {standard_task_runner.py:72} INFO - Started process 6403 to run task
+[2026-07-26T00:01:21.164+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flex_eau_pipeline', 'dim_date', 'scheduled__2026-07-25T00:00:00+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/flex_eau_pipeline.py', '--cfg-path', '/tmp/tmpyo1tk86s']
+[2026-07-26T00:01:21.180+0000] {standard_task_runner.py:105} INFO - Job 36: Subtask dim_date
+[2026-07-26T00:01:21.800+0000] {task_command.py:467} INFO - Running <TaskInstance: flex_eau_pipeline.dim_date scheduled__2026-07-25T00:00:00+00:00 [running]> on host b1da4d7b7394
+[2026-07-26T00:01:22.187+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='flex-eau' AIRFLOW_CTX_DAG_ID='flex_eau_pipeline' AIRFLOW_CTX_TASK_ID='dim_date' AIRFLOW_CTX_EXECUTION_DATE='2026-07-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-25T00:00:00+00:00'
+[2026-07-26T00:01:22.197+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-26T00:01:22.251+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-26T00:01:22.252+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python spark_jobs/dimensions/dim_date.py']
+[2026-07-26T00:01:22.289+0000] {subprocess.py:86} INFO - Output:
+[2026-07-26T00:01:36.288+0000] {subprocess.py:93} INFO - 26/07/26 00:01:36 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-07-26T00:01:38.217+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-07-26T00:01:38.222+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-07-26T00:01:43.112+0000] {subprocess.py:93} INFO - 26/07/26 00:01:43 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2026-07-26T00:01:43.117+0000] {subprocess.py:93} INFO - 26/07/26 00:01:43 WARN Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+[2026-07-26T00:01:43.119+0000] {subprocess.py:93} INFO - 26/07/26 00:01:43 WARN Utils: Service 'SparkUI' could not bind on port 4042. Attempting port 4043.
+[2026-07-26T00:01:43.126+0000] {subprocess.py:93} INFO - 26/07/26 00:01:43 WARN Utils: Service 'SparkUI' could not bind on port 4043. Attempting port 4044.
+[2026-07-26T00:01:43.133+0000] {subprocess.py:93} INFO - 26/07/26 00:01:43 WARN Utils: Service 'SparkUI' could not bind on port 4044. Attempting port 4045.
+[2026-07-26T00:01:43.134+0000] {subprocess.py:93} INFO - 26/07/26 00:01:43 WARN Utils: Service 'SparkUI' could not bind on port 4045. Attempting port 4046.
+[2026-07-26T00:02:26.960+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 0) / 2]26/07/26 00:02:26 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-07-26T00:02:41.961+0000] {subprocess.py:93} INFO - 26/07/26 00:02:41 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-07-26T00:02:56.960+0000] {subprocess.py:93} INFO - 26/07/26 00:02:56 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-07-26T00:03:11.961+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 0) / 2]26/07/26 00:03:11 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-07-26T00:03:24.513+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 2) / 2]                                                                                [Stage 4:>                                                          (0 + 2) / 2]                                                                                Nombre lignes : 731
+[2026-07-26T00:03:24.513+0000] {subprocess.py:93} INFO - +--------+-------------+----+----+--------+---------+-----+------------+-------------+
+[2026-07-26T00:03:24.514+0000] {subprocess.py:93} INFO - |date_key|date_complete|jour|mois|nom_mois|trimestre|annee|jour_semaine|semaine_annee|
+[2026-07-26T00:03:24.514+0000] {subprocess.py:93} INFO - +--------+-------------+----+----+--------+---------+-----+------------+-------------+
+[2026-07-26T00:03:24.515+0000] {subprocess.py:93} INFO - |20240101|2024-01-01   |1   |1   |January |1        |2024 |Monday      |1            |
+[2026-07-26T00:03:24.515+0000] {subprocess.py:93} INFO - |20240102|2024-01-02   |2   |1   |January |1        |2024 |Tuesday     |1            |
+[2026-07-26T00:03:24.516+0000] {subprocess.py:93} INFO - |20240103|2024-01-03   |3   |1   |January |1        |2024 |Wednesday   |1            |
+[2026-07-26T00:03:24.516+0000] {subprocess.py:93} INFO - |20240104|2024-01-04   |4   |1   |January |1        |2024 |Thursday    |1            |
+[2026-07-26T00:03:24.517+0000] {subprocess.py:93} INFO - |20240105|2024-01-05   |5   |1   |January |1        |2024 |Friday      |1            |
+[2026-07-26T00:03:24.517+0000] {subprocess.py:93} INFO - +--------+-------------+----+----+--------+---------+-----+------------+-------------+
+[2026-07-26T00:03:24.518+0000] {subprocess.py:93} INFO - only showing top 5 rows
+[2026-07-26T00:03:24.518+0000] {subprocess.py:93} INFO - 
+[2026-07-26T00:03:24.519+0000] {subprocess.py:93} INFO - AVANT WRITE
+[2026-07-26T00:03:24.519+0000] {subprocess.py:93} INFO - DIM_DATE créée avec succès
+[2026-07-26T00:03:25.106+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-26T00:03:25.175+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-26T00:03:25.176+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=flex_eau_pipeline, task_id=dim_date, run_id=scheduled__2026-07-25T00:00:00+00:00, execution_date=20260725T000000, start_date=20260726T000121, end_date=20260726T000325
+[2026-07-26T00:03:25.219+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2026-07-26T00:03:25.262+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-26T00:03:25.265+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

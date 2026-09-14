@@ -1,0 +1,510 @@
+[2026-06-30T00:05:53.750+0000] {processor.py:186} INFO - Started process (PID=43806) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:05:53.765+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:05:53.818+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:05:53.803+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:05:54.478+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:05:54.466+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:05:54.490+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:05:55.255+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 2.220 seconds
+[2026-06-30T00:07:16.054+0000] {processor.py:186} INFO - Started process (PID=43811) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:07:16.067+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:07:16.075+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:07:16.074+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:07:16.208+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:07:16.202+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:07:16.213+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:07:16.354+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.373 seconds
+[2026-06-30T00:07:46.670+0000] {processor.py:186} INFO - Started process (PID=43816) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:07:46.674+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:07:46.680+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:07:46.680+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:07:46.715+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:07:46.713+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:07:46.716+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:07:46.794+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.165 seconds
+[2026-06-30T00:08:17.231+0000] {processor.py:186} INFO - Started process (PID=43821) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:08:17.233+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:08:17.237+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:08:17.236+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:08:17.273+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:08:17.271+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:08:17.274+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:08:17.336+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.119 seconds
+[2026-06-30T00:08:47.953+0000] {processor.py:186} INFO - Started process (PID=43826) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:08:47.956+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:08:47.971+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:08:47.968+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:08:48.051+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:08:48.047+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:08:48.053+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:08:48.153+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.217 seconds
+[2026-06-30T00:09:18.448+0000] {processor.py:186} INFO - Started process (PID=43831) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:09:18.450+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:09:18.456+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:09:18.455+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:09:18.522+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:09:18.519+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:09:18.525+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:09:18.586+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.151 seconds
+[2026-06-30T00:09:49.008+0000] {processor.py:186} INFO - Started process (PID=43836) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:09:49.014+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:09:49.036+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:09:49.034+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:09:49.145+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:09:49.140+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:09:49.149+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:09:49.277+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.307 seconds
+[2026-06-30T00:10:19.727+0000] {processor.py:186} INFO - Started process (PID=43841) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:10:19.730+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:10:19.736+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:10:19.735+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:10:19.788+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:10:19.784+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:10:19.791+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:10:19.884+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.174 seconds
+[2026-06-30T00:10:50.277+0000] {processor.py:186} INFO - Started process (PID=43846) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:10:50.279+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:10:50.285+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:10:50.284+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:10:50.334+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:10:50.332+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:10:50.336+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:10:50.381+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.117 seconds
+[2026-06-30T00:11:20.546+0000] {processor.py:186} INFO - Started process (PID=43851) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:11:20.549+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:11:20.555+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:11:20.554+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:11:20.597+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:11:20.595+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:11:20.598+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:11:20.637+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.107 seconds
+[2026-06-30T00:11:50.960+0000] {processor.py:186} INFO - Started process (PID=43856) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:11:50.964+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:11:50.973+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:11:50.972+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:11:51.045+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:11:51.040+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:11:51.048+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:11:51.116+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.178 seconds
+[2026-06-30T00:12:22.155+0000] {processor.py:186} INFO - Started process (PID=43861) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:12:22.157+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:12:22.162+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:12:22.162+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:12:22.197+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:12:22.196+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:12:22.198+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:12:22.236+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.092 seconds
+[2026-06-30T00:12:52.437+0000] {processor.py:186} INFO - Started process (PID=43866) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:12:52.440+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:12:52.450+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:12:52.449+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:12:52.502+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:12:52.499+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:12:52.504+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:12:52.561+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.134 seconds
+[2026-06-30T00:13:22.911+0000] {processor.py:186} INFO - Started process (PID=43871) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:13:22.914+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:13:22.921+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:13:22.920+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:13:22.977+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:13:22.974+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:13:22.979+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:13:23.061+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.192 seconds
+[2026-06-30T00:13:53.787+0000] {processor.py:186} INFO - Started process (PID=43876) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:13:53.789+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:13:53.799+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:13:53.794+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:13:54.136+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:13:54.131+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:13:54.138+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:13:54.220+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.443 seconds
+[2026-06-30T00:14:25.373+0000] {processor.py:186} INFO - Started process (PID=43881) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:14:25.377+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:14:25.382+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:14:25.382+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:14:25.426+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:14:25.423+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:14:25.427+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:14:25.471+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.115 seconds
+[2026-06-30T00:14:56.469+0000] {processor.py:186} INFO - Started process (PID=43886) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:14:56.473+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:14:56.482+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:14:56.480+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:14:56.538+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:14:56.534+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:14:56.541+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:14:56.615+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.170 seconds
+[2026-06-30T00:15:28.993+0000] {processor.py:186} INFO - Started process (PID=43891) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:15:28.995+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:15:29.002+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:15:29.002+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:15:29.042+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:15:29.040+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:15:29.043+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:15:29.083+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.113 seconds
+[2026-06-30T00:15:59.463+0000] {processor.py:186} INFO - Started process (PID=43896) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:15:59.465+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:15:59.470+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:15:59.470+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:15:59.508+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:15:59.506+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:15:59.509+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:15:59.547+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.093 seconds
+[2026-06-30T00:16:30.425+0000] {processor.py:186} INFO - Started process (PID=43901) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:16:30.427+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:16:30.431+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:16:30.430+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:16:30.467+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:16:30.465+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:16:30.468+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:16:30.503+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.100 seconds
+[2026-06-30T00:17:00.859+0000] {processor.py:186} INFO - Started process (PID=43906) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:17:00.860+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:17:00.864+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:17:00.863+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:17:00.896+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:17:00.895+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:17:00.897+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:17:00.934+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.085 seconds
+[2026-06-30T00:17:31.189+0000] {processor.py:186} INFO - Started process (PID=43911) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:17:31.191+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:17:31.196+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:17:31.195+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:17:31.231+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:17:31.229+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:17:31.232+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:17:31.267+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.087 seconds
+[2026-06-30T00:18:01.442+0000] {processor.py:186} INFO - Started process (PID=43916) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:18:01.447+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:18:01.478+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:18:01.477+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:18:01.523+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:18:01.521+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:18:01.525+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:18:01.611+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.198 seconds
+[2026-06-30T00:18:32.426+0000] {processor.py:186} INFO - Started process (PID=43921) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:18:32.432+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:18:32.437+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:18:32.436+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:18:32.504+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:18:32.501+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:18:32.506+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:18:32.590+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.197 seconds
+[2026-06-30T00:19:03.690+0000] {processor.py:186} INFO - Started process (PID=43926) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:19:03.693+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:19:03.698+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:19:03.697+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:19:03.855+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:19:03.852+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:19:03.905+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:19:04.371+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.703 seconds
+[2026-06-30T00:19:35.017+0000] {processor.py:186} INFO - Started process (PID=43931) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:19:35.020+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:19:35.073+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:19:35.057+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:19:35.229+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:19:35.226+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:19:35.233+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:19:35.409+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.443 seconds
+[2026-06-30T00:20:05.719+0000] {processor.py:186} INFO - Started process (PID=43936) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:20:05.721+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:20:05.735+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:20:05.735+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:20:05.803+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:20:05.801+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:20:05.805+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:20:05.932+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.249 seconds
+[2026-06-30T00:20:36.241+0000] {processor.py:186} INFO - Started process (PID=43941) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:20:36.243+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:20:36.250+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:20:36.249+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:20:36.281+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:20:36.279+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:20:36.283+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:20:36.391+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.180 seconds
+[2026-06-30T00:21:06.647+0000] {processor.py:186} INFO - Started process (PID=43946) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:21:06.651+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:21:06.661+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:21:06.660+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:21:06.724+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:21:06.721+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:21:06.726+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:21:06.763+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.141 seconds
+[2026-06-30T00:21:37.668+0000] {processor.py:186} INFO - Started process (PID=43951) to work on /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:21:37.669+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/flex_eau_pipeline.py for tasks to queue
+[2026-06-30T00:21:37.673+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:21:37.673+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:21:37.725+0000] {logging_mixin.py:190} INFO - [2026-06-30T00:21:37.724+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/flex_eau_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/flex_eau_pipeline.py", line 26
+    ingestion = BashOperator(
+    ^^^^^^^^^
+IndentationError: expected an indented block after 'with' statement on line 11
+[2026-06-30T00:21:37.726+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/flex_eau_pipeline.py
+[2026-06-30T00:21:37.764+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/flex_eau_pipeline.py took 0.110 seconds

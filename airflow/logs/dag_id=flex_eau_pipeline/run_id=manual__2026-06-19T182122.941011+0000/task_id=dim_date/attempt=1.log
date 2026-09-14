@@ -1,0 +1,94 @@
+[2026-06-19T18:21:24.848+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-06-19T18:21:24.886+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flex_eau_pipeline.dim_date manual__2026-06-19T18:21:22.941011+00:00 [queued]>
+[2026-06-19T18:21:24.904+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flex_eau_pipeline.dim_date manual__2026-06-19T18:21:22.941011+00:00 [queued]>
+[2026-06-19T18:21:24.906+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 1
+[2026-06-19T18:21:24.939+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): dim_date> on 2026-06-19 18:21:22.941011+00:00
+[2026-06-19T18:21:24.962+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=290) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-06-19T18:21:24.978+0000] {standard_task_runner.py:72} INFO - Started process 294 to run task
+[2026-06-19T18:21:24.977+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flex_eau_pipeline', 'dim_date', 'manual__2026-06-19T18:21:22.941011+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/flex_eau_pipeline.py', '--cfg-path', '/tmp/tmpvjwyoh2m']
+[2026-06-19T18:21:24.999+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask dim_date
+[2026-06-19T18:21:25.256+0000] {task_command.py:467} INFO - Running <TaskInstance: flex_eau_pipeline.dim_date manual__2026-06-19T18:21:22.941011+00:00 [running]> on host 91a8e2bd83e7
+[2026-06-19T18:21:25.510+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='flex_eau_pipeline' AIRFLOW_CTX_TASK_ID='dim_date' AIRFLOW_CTX_EXECUTION_DATE='2026-06-19T18:21:22.941011+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-19T18:21:22.941011+00:00'
+[2026-06-19T18:21:25.511+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-06-19T18:21:25.613+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-06-19T18:21:25.623+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        cd /opt/project &&         python spark_jobs/dimensions/dim_date.py\n        ']
+[2026-06-19T18:21:25.647+0000] {subprocess.py:86} INFO - Output:
+[2026-06-19T18:21:33.901+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-06-19T18:21:33.905+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-06-19T18:21:34.299+0000] {subprocess.py:93} INFO - 26/06/19 18:21:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-06-19T18:21:58.192+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 8) / 8][Stage 0:======================>                                    (3 + 5) / 8][Stage 0:============================================>              (6 + 2) / 8]                                                                                Nombre lignes : 731
+[2026-06-19T18:21:58.196+0000] {subprocess.py:93} INFO - +--------+-------------+----+----+--------+---------+-----+------------+-------------+
+[2026-06-19T18:21:58.197+0000] {subprocess.py:93} INFO - |date_key|date_complete|jour|mois|nom_mois|trimestre|annee|jour_semaine|semaine_annee|
+[2026-06-19T18:21:58.198+0000] {subprocess.py:93} INFO - +--------+-------------+----+----+--------+---------+-----+------------+-------------+
+[2026-06-19T18:21:58.199+0000] {subprocess.py:93} INFO - |20240101|2024-01-01   |1   |1   |January |1        |2024 |Monday      |1            |
+[2026-06-19T18:21:58.200+0000] {subprocess.py:93} INFO - |20240102|2024-01-02   |2   |1   |January |1        |2024 |Tuesday     |1            |
+[2026-06-19T18:21:58.201+0000] {subprocess.py:93} INFO - |20240103|2024-01-03   |3   |1   |January |1        |2024 |Wednesday   |1            |
+[2026-06-19T18:21:58.202+0000] {subprocess.py:93} INFO - |20240104|2024-01-04   |4   |1   |January |1        |2024 |Thursday    |1            |
+[2026-06-19T18:21:58.203+0000] {subprocess.py:93} INFO - |20240105|2024-01-05   |5   |1   |January |1        |2024 |Friday      |1            |
+[2026-06-19T18:21:58.204+0000] {subprocess.py:93} INFO - +--------+-------------+----+----+--------+---------+-----+------------+-------------+
+[2026-06-19T18:21:58.206+0000] {subprocess.py:93} INFO - only showing top 5 rows
+[2026-06-19T18:21:58.209+0000] {subprocess.py:93} INFO - 
+[2026-06-19T18:21:58.210+0000] {subprocess.py:93} INFO - AVANT WRITE
+[2026-06-19T18:21:58.212+0000] {subprocess.py:93} INFO - ERREUR WRITE :
+[2026-06-19T18:21:58.213+0000] {subprocess.py:93} INFO - An error occurred while calling o44.jdbc.
+[2026-06-19T18:21:58.218+0000] {subprocess.py:93} INFO - : java.lang.ClassNotFoundException: org.postgresql.Driver
+[2026-06-19T18:21:58.219+0000] {subprocess.py:93} INFO - 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+[2026-06-19T18:21:58.220+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:592)
+[2026-06-19T18:21:58.224+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+[2026-06-19T18:21:58.229+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.DriverRegistry$.register(DriverRegistry.scala:46)
+[2026-06-19T18:21:58.235+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCOptions.$anonfun$driverClass$1(JDBCOptions.scala:103)
+[2026-06-19T18:21:58.238+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCOptions.$anonfun$driverClass$1$adapted(JDBCOptions.scala:103)
+[2026-06-19T18:21:58.241+0000] {subprocess.py:93} INFO - 	at scala.Option.foreach(Option.scala:407)
+[2026-06-19T18:21:58.242+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCOptions.<init>(JDBCOptions.scala:103)
+[2026-06-19T18:21:58.252+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcOptionsInWrite.<init>(JDBCOptions.scala:254)
+[2026-06-19T18:21:58.254+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcOptionsInWrite.<init>(JDBCOptions.scala:258)
+[2026-06-19T18:21:58.255+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:47)
+[2026-06-19T18:21:58.256+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+[2026-06-19T18:21:58.257+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+[2026-06-19T18:21:58.258+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+[2026-06-19T18:21:58.260+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+[2026-06-19T18:21:58.261+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+[2026-06-19T18:21:58.262+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+[2026-06-19T18:21:58.263+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+[2026-06-19T18:21:58.264+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+[2026-06-19T18:21:58.265+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+[2026-06-19T18:21:58.265+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+[2026-06-19T18:21:58.266+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+[2026-06-19T18:21:58.267+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+[2026-06-19T18:21:58.267+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+[2026-06-19T18:21:58.268+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+[2026-06-19T18:21:58.269+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+[2026-06-19T18:21:58.269+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+[2026-06-19T18:21:58.270+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+[2026-06-19T18:21:58.271+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+[2026-06-19T18:21:58.271+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+[2026-06-19T18:21:58.273+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+[2026-06-19T18:21:58.274+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+[2026-06-19T18:21:58.274+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+[2026-06-19T18:21:58.275+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+[2026-06-19T18:21:58.276+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+[2026-06-19T18:21:58.277+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+[2026-06-19T18:21:58.280+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+[2026-06-19T18:21:58.281+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+[2026-06-19T18:21:58.283+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+[2026-06-19T18:21:58.285+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+[2026-06-19T18:21:58.286+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:756)
+[2026-06-19T18:21:58.287+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2026-06-19T18:21:58.288+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+[2026-06-19T18:21:58.289+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2026-06-19T18:21:58.293+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+[2026-06-19T18:21:58.295+0000] {subprocess.py:93} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2026-06-19T18:21:58.296+0000] {subprocess.py:93} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2026-06-19T18:21:58.297+0000] {subprocess.py:93} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2026-06-19T18:21:58.298+0000] {subprocess.py:93} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2026-06-19T18:21:58.298+0000] {subprocess.py:93} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2026-06-19T18:21:58.299+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2026-06-19T18:21:58.300+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2026-06-19T18:21:58.324+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-06-19T18:21:58.327+0000] {subprocess.py:93} INFO - 
+[2026-06-19T18:21:58.917+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-06-19T18:21:58.983+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-06-19T18:21:58.984+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=flex_eau_pipeline, task_id=dim_date, run_id=manual__2026-06-19T18:21:22.941011+00:00, execution_date=20260619T182122, start_date=20260619T182124, end_date=20260619T182158
+[2026-06-19T18:21:59.031+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2026-06-19T18:21:59.062+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-06-19T18:21:59.065+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

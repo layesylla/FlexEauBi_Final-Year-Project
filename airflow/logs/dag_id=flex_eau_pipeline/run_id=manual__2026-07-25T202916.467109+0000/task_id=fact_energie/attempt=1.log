@@ -1,0 +1,51 @@
+[2026-07-25T20:33:16.410+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-25T20:33:16.489+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flex_eau_pipeline.fact_energie manual__2026-07-25T20:29:16.467109+00:00 [queued]>
+[2026-07-25T20:33:16.516+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flex_eau_pipeline.fact_energie manual__2026-07-25T20:29:16.467109+00:00 [queued]>
+[2026-07-25T20:33:16.518+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2026-07-25T20:33:16.561+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): fact_energie> on 2026-07-25 20:29:16.467109+00:00
+[2026-07-25T20:33:16.582+0000] {standard_task_runner.py:72} INFO - Started process 2292 to run task
+[2026-07-25T20:33:16.593+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flex_eau_pipeline', 'fact_energie', 'manual__2026-07-25T20:29:16.467109+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/flex_eau_pipeline.py', '--cfg-path', '/tmp/tmp60yzg11s']
+[2026-07-25T20:33:16.601+0000] {standard_task_runner.py:105} INFO - Job 30: Subtask fact_energie
+[2026-07-25T20:33:16.780+0000] {task_command.py:467} INFO - Running <TaskInstance: flex_eau_pipeline.fact_energie manual__2026-07-25T20:29:16.467109+00:00 [running]> on host b1da4d7b7394
+[2026-07-25T20:33:17.159+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='flex-eau' AIRFLOW_CTX_DAG_ID='flex_eau_pipeline' AIRFLOW_CTX_TASK_ID='fact_energie' AIRFLOW_CTX_EXECUTION_DATE='2026-07-25T20:29:16.467109+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-25T20:29:16.467109+00:00'
+[2026-07-25T20:33:17.162+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-25T20:33:17.245+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-25T20:33:17.247+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python spark_jobs/facts/fact_energie.py']
+[2026-07-25T20:33:17.292+0000] {subprocess.py:86} INFO - Output:
+[2026-07-25T20:33:27.238+0000] {subprocess.py:93} INFO - 26/07/25 20:33:27 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-07-25T20:33:28.484+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-07-25T20:33:28.491+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-07-25T20:34:10.804+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 0) / 1][Stage 0:>                  (0 + 1) / 1][Stage 1:>                  (0 + 1) / 1][Stage 0:>    (0 + 1) / 1][Stage 1:>    (0 + 1) / 1][Stage 2:>    (0 + 1) / 1][Stage 0:>    (0 + 1) / 1][Stage 1:>    (0 + 1) / 1][Stage 2:=====(1 + 0) / 1][Stage 0:>                  (0 + 1) / 1][Stage 1:>                  (0 + 1) / 1][Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                  (0 + 1) / 1][Stage 5:>                  (0 + 1) / 1]                                                                                [Stage 16:>                                                         (0 + 1) / 1]                                                                                [Stage 25:>                                                         (0 + 1) / 1]                                                                                [Stage 27:>                                                         (0 + 1) / 1]                                                                                Nombre lignes : 360
+[2026-07-25T20:34:10.807+0000] {subprocess.py:93} INFO - +--------+-------+----------+------------+-----------------+----------------+
+[2026-07-25T20:34:10.807+0000] {subprocess.py:93} INFO - |date_key|geo_key|forage_key|kwh_consomme|cout_energie_fcfa|nb_consommations|
+[2026-07-25T20:34:10.808+0000] {subprocess.py:93} INFO - +--------+-------+----------+------------+-----------------+----------------+
+[2026-07-25T20:34:10.809+0000] {subprocess.py:93} INFO - |20240131|5      |0         |475         |184120.0         |1               |
+[2026-07-25T20:34:10.813+0000] {subprocess.py:93} INFO - |20240229|5      |0         |576         |199952.0         |1               |
+[2026-07-25T20:34:10.815+0000] {subprocess.py:93} INFO - |20240331|5      |0         |470         |182006.0         |1               |
+[2026-07-25T20:34:10.817+0000] {subprocess.py:93} INFO - |20240430|5      |0         |562         |178558.0         |1               |
+[2026-07-25T20:34:10.818+0000] {subprocess.py:93} INFO - |20240531|5      |0         |445         |194550.0         |1               |
+[2026-07-25T20:34:10.819+0000] {subprocess.py:93} INFO - |20240630|5      |0         |596         |129434.0         |1               |
+[2026-07-25T20:34:10.820+0000] {subprocess.py:93} INFO - |20240731|5      |0         |528         |188308.0         |1               |
+[2026-07-25T20:34:10.822+0000] {subprocess.py:93} INFO - |20240831|5      |0         |468         |132954.0         |1               |
+[2026-07-25T20:34:10.824+0000] {subprocess.py:93} INFO - |20240930|5      |0         |555         |151359.0         |1               |
+[2026-07-25T20:34:10.828+0000] {subprocess.py:93} INFO - |20241031|5      |0         |526         |199245.0         |1               |
+[2026-07-25T20:34:10.833+0000] {subprocess.py:93} INFO - |20241130|5      |0         |410         |143425.0         |1               |
+[2026-07-25T20:34:10.834+0000] {subprocess.py:93} INFO - |20241231|5      |0         |461         |171871.0         |1               |
+[2026-07-25T20:34:10.835+0000] {subprocess.py:93} INFO - |20250131|5      |0         |465         |174726.0         |1               |
+[2026-07-25T20:34:10.836+0000] {subprocess.py:93} INFO - |20250228|5      |0         |488         |132967.0         |1               |
+[2026-07-25T20:34:10.837+0000] {subprocess.py:93} INFO - |20250331|5      |0         |496         |193837.0         |1               |
+[2026-07-25T20:34:10.838+0000] {subprocess.py:93} INFO - |20250430|5      |0         |433         |126209.0         |1               |
+[2026-07-25T20:34:10.839+0000] {subprocess.py:93} INFO - |20250531|5      |0         |576         |133437.0         |1               |
+[2026-07-25T20:34:10.840+0000] {subprocess.py:93} INFO - |20250630|5      |0         |439         |159434.0         |1               |
+[2026-07-25T20:34:10.845+0000] {subprocess.py:93} INFO - |20250731|5      |0         |573         |188313.0         |1               |
+[2026-07-25T20:34:10.847+0000] {subprocess.py:93} INFO - |20250831|5      |0         |533         |183049.0         |1               |
+[2026-07-25T20:34:10.848+0000] {subprocess.py:93} INFO - +--------+-------+----------+------------+-----------------+----------------+
+[2026-07-25T20:34:10.849+0000] {subprocess.py:93} INFO - only showing top 20 rows
+[2026-07-25T20:34:10.849+0000] {subprocess.py:93} INFO - 
+[2026-07-25T20:34:10.850+0000] {subprocess.py:93} INFO - FACT_ENERGIE créée avec succès
+[2026-07-25T20:34:11.375+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-25T20:34:11.456+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-25T20:34:11.457+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=flex_eau_pipeline, task_id=fact_energie, run_id=manual__2026-07-25T20:29:16.467109+00:00, execution_date=20260725T202916, start_date=20260725T203316, end_date=20260725T203411
+[2026-07-25T20:34:11.534+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2026-07-25T20:34:11.571+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-25T20:34:11.575+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

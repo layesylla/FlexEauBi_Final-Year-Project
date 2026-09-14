@@ -1,0 +1,60 @@
+[2026-08-12T00:25:38.232+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-12T00:25:38.361+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flex_eau_pipeline.dim_geo scheduled__2026-08-11T00:00:00+00:00 [queued]>
+[2026-08-12T00:25:38.397+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flex_eau_pipeline.dim_geo scheduled__2026-08-11T00:00:00+00:00 [queued]>
+[2026-08-12T00:25:38.398+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2026-08-12T00:25:38.458+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): dim_geo> on 2026-08-11 00:00:00+00:00
+[2026-08-12T00:25:38.494+0000] {standard_task_runner.py:72} INFO - Started process 6885 to run task
+[2026-08-12T00:25:38.516+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flex_eau_pipeline', 'dim_geo', 'scheduled__2026-08-11T00:00:00+00:00', '--job-id', '71', '--raw', '--subdir', 'DAGS_FOLDER/flex_eau_pipeline.py', '--cfg-path', '/tmp/tmphigf8d_5']
+[2026-08-12T00:25:38.528+0000] {standard_task_runner.py:105} INFO - Job 71: Subtask dim_geo
+[2026-08-12T00:25:38.741+0000] {task_command.py:467} INFO - Running <TaskInstance: flex_eau_pipeline.dim_geo scheduled__2026-08-11T00:00:00+00:00 [running]> on host b97d7a013992
+[2026-08-12T00:25:39.022+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='flex-eau' AIRFLOW_CTX_DAG_ID='flex_eau_pipeline' AIRFLOW_CTX_TASK_ID='dim_geo' AIRFLOW_CTX_EXECUTION_DATE='2026-08-11T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-08-11T00:00:00+00:00'
+[2026-08-12T00:25:39.024+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-12T00:25:39.060+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-08-12T00:25:39.062+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python spark_jobs/dimensions/dim_geo.py']
+[2026-08-12T00:25:39.089+0000] {subprocess.py:86} INFO - Output:
+[2026-08-12T00:25:52.761+0000] {subprocess.py:93} INFO - 26/08/12 00:25:52 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-08-12T00:25:54.626+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-08-12T00:25:54.630+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-08-12T00:26:00.725+0000] {subprocess.py:93} INFO - 26/08/12 00:26:00 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2026-08-12T00:26:00.737+0000] {subprocess.py:93} INFO - 26/08/12 00:26:00 WARN Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+[2026-08-12T00:26:00.744+0000] {subprocess.py:93} INFO - 26/08/12 00:26:00 WARN Utils: Service 'SparkUI' could not bind on port 4042. Attempting port 4043.
+[2026-08-12T00:26:00.756+0000] {subprocess.py:93} INFO - 26/08/12 00:26:00 WARN Utils: Service 'SparkUI' could not bind on port 4043. Attempting port 4044.
+[2026-08-12T00:26:00.762+0000] {subprocess.py:93} INFO - 26/08/12 00:26:00 WARN Utils: Service 'SparkUI' could not bind on port 4044. Attempting port 4045.
+[2026-08-12T00:26:00.765+0000] {subprocess.py:93} INFO - 26/08/12 00:26:00 WARN Utils: Service 'SparkUI' could not bind on port 4045. Attempting port 4046.
+[2026-08-12T00:26:44.565+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 0) / 1][Stage 0:>    (0 + 0) / 1][Stage 1:>    (0 + 0) / 1][Stage 2:>    (0 + 0) / 1]26/08/12 00:26:44 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-08-12T00:26:59.566+0000] {subprocess.py:93} INFO - 26/08/12 00:26:59 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-08-12T00:27:14.565+0000] {subprocess.py:93} INFO - 26/08/12 00:27:14 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-08-12T00:27:29.600+0000] {subprocess.py:93} INFO - 26/08/12 00:27:29 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-08-12T00:27:46.329+0000] {subprocess.py:93} INFO - [Stage 0:>    (0 + 0) / 1][Stage 1:>    (0 + 0) / 1][Stage 2:>    (0 + 0) / 1][Stage 0:>    (0 + 1) / 1][Stage 1:>    (0 + 1) / 1][Stage 2:>    (0 + 1) / 1]                                                                                [Stage 46:>                                                         (0 + 1) / 1]                                                                                Nombre lignes : 20
+[2026-08-12T00:27:46.330+0000] {subprocess.py:93} INFO - +-------+---------+-----------+----------+--------------+---------------+----------+------------------+-------+------------------+
+[2026-08-12T00:27:46.331+0000] {subprocess.py:93} INFO - |geo_key|region_id|region_code|region_nom|departement_id|departement_nom|commune_id|commune_nom       |site_id|site_nom          |
+[2026-08-12T00:27:46.332+0000] {subprocess.py:93} INFO - +-------+---------+-----------+----------+--------------+---------------+----------+------------------+-------+------------------+
+[2026-08-12T00:27:46.333+0000] {subprocess.py:93} INFO - |0      |1        |KL         |Kaolack   |7             |Nioro du Rip   |49        |Kayemor           |27     |Kayemor           |
+[2026-08-12T00:27:46.334+0000] {subprocess.py:93} INFO - |1      |1        |KL         |Kaolack   |7             |Nioro du Rip   |61        |Wack Ngouna       |29     |Wack Ngouna       |
+[2026-08-12T00:27:46.334+0000] {subprocess.py:93} INFO - |2      |1        |KL         |Kaolack   |7             |Nioro du Rip   |50        |Medina Sabakh     |30     |Medina Sabakh     |
+[2026-08-12T00:27:46.335+0000] {subprocess.py:93} INFO - |3      |1        |KL         |Kaolack   |7             |Nioro du Rip   |54        |Paoscoto          |28     |Paoscoto          |
+[2026-08-12T00:27:46.335+0000] {subprocess.py:93} INFO - |4      |1        |KL         |Kaolack   |6             |Kaolack        |47        |Ndiebel           |22     |Ndiebel           |
+[2026-08-12T00:27:46.336+0000] {subprocess.py:93} INFO - |5      |1        |KL         |Kaolack   |6             |Kaolack        |64        |Sibassor          |21     |Sibassor          |
+[2026-08-12T00:27:46.337+0000] {subprocess.py:93} INFO - |6      |1        |KL         |Kaolack   |6             |Kaolack        |66        |Gandiaye          |23     |Gandiaye          |
+[2026-08-12T00:27:46.340+0000] {subprocess.py:93} INFO - |7      |1        |KL         |Kaolack   |6             |Kaolack        |43        |Keur Soce         |24     |Keur Soce         |
+[2026-08-12T00:27:46.345+0000] {subprocess.py:93} INFO - |8      |1        |KL         |Kaolack   |5             |Guinguineo     |36        |Nguelou           |26     |Nguelou           |
+[2026-08-12T00:27:46.355+0000] {subprocess.py:93} INFO - |9      |1        |KL         |Kaolack   |5             |Guinguineo     |32        |Mbadakhoune       |25     |Mbadakhoune       |
+[2026-08-12T00:27:46.358+0000] {subprocess.py:93} INFO - |10     |2        |KF         |Kaffrine  |1             |Birkelane      |69        |Birkelane         |31     |Birkelane         |
+[2026-08-12T00:27:46.360+0000] {subprocess.py:93} INFO - |11     |2        |KF         |Kaffrine  |1             |Birkelane      |1         |Diamal            |33     |Diamal            |
+[2026-08-12T00:27:46.361+0000] {subprocess.py:93} INFO - |12     |2        |KF         |Kaffrine  |3             |Koungheul      |16        |Fass Thieckene    |37     |Fass Thieckene    |
+[2026-08-12T00:27:46.363+0000] {subprocess.py:93} INFO - |13     |2        |KF         |Kaffrine  |3             |Koungheul      |20        |Lour Escale       |39     |Lour Escale       |
+[2026-08-12T00:27:46.364+0000] {subprocess.py:93} INFO - |14     |2        |KF         |Kaffrine  |3             |Koungheul      |18        |Ida Mouride       |38     |Ida Mouride       |
+[2026-08-12T00:27:46.366+0000] {subprocess.py:93} INFO - |15     |2        |KF         |Kaffrine  |2             |Kaffrine       |62        |Katakel           |35     |Katakel           |
+[2026-08-12T00:27:46.367+0000] {subprocess.py:93} INFO - |16     |2        |KF         |Kaffrine  |2             |Kaffrine       |8         |Gniby             |32     |Gniby             |
+[2026-08-12T00:27:46.369+0000] {subprocess.py:93} INFO - |17     |2        |KF         |Kaffrine  |2             |Kaffrine       |12        |Diockoul Mbelbouck|36     |Diockoul Mbelbouck|
+[2026-08-12T00:27:46.370+0000] {subprocess.py:93} INFO - |18     |2        |KF         |Kaffrine  |2             |Kaffrine       |10        |Kahi              |34     |Kahi              |
+[2026-08-12T00:27:46.371+0000] {subprocess.py:93} INFO - |19     |2        |KF         |Kaffrine  |4             |Malem Hodar    |30        |Malem Hoddar      |40     |Malem Hoddar      |
+[2026-08-12T00:27:46.373+0000] {subprocess.py:93} INFO - +-------+---------+-----------+----------+--------------+---------------+----------+------------------+-------+------------------+
+[2026-08-12T00:27:46.374+0000] {subprocess.py:93} INFO - 
+[2026-08-12T00:27:46.375+0000] {subprocess.py:93} INFO - DIM_GEOGRAPHIE créée avec succès
+[2026-08-12T00:27:46.972+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-08-12T00:27:47.052+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-12T00:27:47.055+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=flex_eau_pipeline, task_id=dim_geo, run_id=scheduled__2026-08-11T00:00:00+00:00, execution_date=20260811T000000, start_date=20260812T002538, end_date=20260812T002747
+[2026-08-12T00:27:47.110+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2026-08-12T00:27:47.150+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-08-12T00:27:47.156+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

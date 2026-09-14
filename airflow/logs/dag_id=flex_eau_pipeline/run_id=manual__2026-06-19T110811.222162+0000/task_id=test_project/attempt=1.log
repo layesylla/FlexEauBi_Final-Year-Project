@@ -1,0 +1,29 @@
+[2026-06-19T11:08:14.222+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-06-19T11:08:14.250+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flex_eau_pipeline.test_project manual__2026-06-19T11:08:11.222162+00:00 [queued]>
+[2026-06-19T11:08:14.261+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flex_eau_pipeline.test_project manual__2026-06-19T11:08:11.222162+00:00 [queued]>
+[2026-06-19T11:08:14.263+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 1
+[2026-06-19T11:08:14.283+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): test_project> on 2026-06-19 11:08:11.222162+00:00
+[2026-06-19T11:08:14.301+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=420) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-06-19T11:08:14.303+0000] {standard_task_runner.py:72} INFO - Started process 426 to run task
+[2026-06-19T11:08:14.301+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flex_eau_pipeline', 'test_project', 'manual__2026-06-19T11:08:11.222162+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/flex_eau_pipeline.py', '--cfg-path', '/tmp/tmppu11vrc9']
+[2026-06-19T11:08:14.304+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask test_project
+[2026-06-19T11:08:14.384+0000] {task_command.py:467} INFO - Running <TaskInstance: flex_eau_pipeline.test_project manual__2026-06-19T11:08:11.222162+00:00 [running]> on host c8e8132d7a03
+[2026-06-19T11:08:14.514+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='flex_eau_pipeline' AIRFLOW_CTX_TASK_ID='test_project' AIRFLOW_CTX_EXECUTION_DATE='2026-06-19T11:08:11.222162+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-19T11:08:11.222162+00:00'
+[2026-06-19T11:08:14.515+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-06-19T11:08:14.548+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-06-19T11:08:14.552+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'ls /opt/project']
+[2026-06-19T11:08:14.571+0000] {subprocess.py:86} INFO - Output:
+[2026-06-19T11:08:14.642+0000] {subprocess.py:93} INFO - ***
+[2026-06-19T11:08:14.643+0000] {subprocess.py:93} INFO - dlt
+[2026-06-19T11:08:14.643+0000] {subprocess.py:93} INFO - docker-compose.yml
+[2026-06-19T11:08:14.644+0000] {subprocess.py:93} INFO - ingestion
+[2026-06-19T11:08:14.644+0000] {subprocess.py:93} INFO - jars
+[2026-06-19T11:08:14.645+0000] {subprocess.py:93} INFO - main.py
+[2026-06-19T11:08:14.645+0000] {subprocess.py:93} INFO - spark_jobs
+[2026-06-19T11:08:14.646+0000] {subprocess.py:93} INFO - sql
+[2026-06-19T11:08:14.646+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-06-19T11:08:14.687+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-06-19T11:08:14.688+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=flex_eau_pipeline, task_id=test_project, run_id=manual__2026-06-19T11:08:11.222162+00:00, execution_date=20260619T110811, start_date=20260619T110814, end_date=20260619T110814
+[2026-06-19T11:08:14.726+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2026-06-19T11:08:14.750+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-06-19T11:08:14.754+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

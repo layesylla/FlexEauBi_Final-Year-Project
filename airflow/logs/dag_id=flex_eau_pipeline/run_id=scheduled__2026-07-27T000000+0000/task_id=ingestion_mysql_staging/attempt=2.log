@@ -1,0 +1,112 @@
+[2026-07-28T00:35:02.004+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-28T00:35:02.024+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flex_eau_pipeline.ingestion_mysql_staging scheduled__2026-07-27T00:00:00+00:00 [queued]>
+[2026-07-28T00:35:02.033+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flex_eau_pipeline.ingestion_mysql_staging scheduled__2026-07-27T00:00:00+00:00 [queued]>
+[2026-07-28T00:35:02.036+0000] {taskinstance.py:2856} INFO - Starting attempt 2 of 2
+[2026-07-28T00:35:02.053+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): ingestion_mysql_staging> on 2026-07-27 00:00:00+00:00
+[2026-07-28T00:35:02.058+0000] {standard_task_runner.py:72} INFO - Started process 255 to run task
+[2026-07-28T00:35:02.063+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flex_eau_pipeline', 'ingestion_mysql_staging', 'scheduled__2026-07-27T00:00:00+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/flex_eau_pipeline.py', '--cfg-path', '/tmp/tmpoo3_eipr']
+[2026-07-28T00:35:02.067+0000] {standard_task_runner.py:105} INFO - Job 53: Subtask ingestion_mysql_staging
+[2026-07-28T00:35:02.141+0000] {task_command.py:467} INFO - Running <TaskInstance: flex_eau_pipeline.ingestion_mysql_staging scheduled__2026-07-27T00:00:00+00:00 [running]> on host b1da4d7b7394
+[2026-07-28T00:35:02.239+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='flex-eau' AIRFLOW_CTX_DAG_ID='flex_eau_pipeline' AIRFLOW_CTX_TASK_ID='ingestion_mysql_staging' AIRFLOW_CTX_EXECUTION_DATE='2026-07-27T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-27T00:00:00+00:00'
+[2026-07-28T00:35:02.240+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-28T00:35:02.256+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-28T00:35:02.256+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -e\n        python ingestion/mysql_to_staging.py\n        ']
+[2026-07-28T00:35:02.267+0000] {subprocess.py:86} INFO - Output:
+[2026-07-28T00:35:08.678+0000] {subprocess.py:93} INFO - 
+[2026-07-28T00:35:08.679+0000] {subprocess.py:93} INFO - ===== regions =====
+[2026-07-28T00:35:08.683+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-07-28T00:35:08.686+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 553, in normalize
+[2026-07-28T00:35:08.687+0000] {subprocess.py:93} INFO -     runner.run_pool(normalize_step.config, normalize_step)
+[2026-07-28T00:35:08.687+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/common/runners/pool_runner.py", line 91, in run_pool
+[2026-07-28T00:35:08.688+0000] {subprocess.py:93} INFO -     while _run_func():
+[2026-07-28T00:35:08.688+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/common/runners/pool_runner.py", line 84, in _run_func
+[2026-07-28T00:35:08.689+0000] {subprocess.py:93} INFO -     run_metrics = run_f.run(cast(TExecutor, pool))
+[2026-07-28T00:35:08.689+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/normalize/normalize.py", line 280, in run
+[2026-07-28T00:35:08.690+0000] {subprocess.py:93} INFO -     self.spool_schema_files(load_id, schema, schema_files)
+[2026-07-28T00:35:08.690+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/normalize/normalize.py", line 234, in spool_schema_files
+[2026-07-28T00:35:08.691+0000] {subprocess.py:93} INFO -     self.spool_files(load_id, schema.clone(update_normalizers=True), map_f, files)
+[2026-07-28T00:35:08.691+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/normalize/normalize.py", line 201, in spool_files
+[2026-07-28T00:35:08.692+0000] {subprocess.py:93} INFO -     self.load_storage.new_packages.save_schema_updates(
+[2026-07-28T00:35:08.692+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/common/storages/load_package.py", line 533, in save_schema_updates
+[2026-07-28T00:35:08.693+0000] {subprocess.py:93} INFO -     with self.storage.open_file(
+[2026-07-28T00:35:08.693+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/common/storages/file_storage.py", line 114, in open_file
+[2026-07-28T00:35:08.693+0000] {subprocess.py:93} INFO -     return open(self.make_full_path(relative_path), mode, encoding=encoding_for_mode(mode))
+[2026-07-28T00:35:08.694+0000] {subprocess.py:93} INFO - FileNotFoundError: [Errno 2] No such file or directory: '/home/***/.dlt/pipelines/flex_staging_pipeline/load/new/1785198907.3771846/schema_updates.json'
+[2026-07-28T00:35:08.694+0000] {subprocess.py:93} INFO - 
+[2026-07-28T00:35:08.695+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2026-07-28T00:35:08.695+0000] {subprocess.py:93} INFO - 
+[2026-07-28T00:35:08.696+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-07-28T00:35:08.696+0000] {subprocess.py:93} INFO -   File "ingestion/mysql_to_staging.py", line 32, in <module>
+[2026-07-28T00:35:08.697+0000] {subprocess.py:93} INFO -     load_info = pipeline.run(
+[2026-07-28T00:35:08.697+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 226, in _wrap
+[2026-07-28T00:35:08.698+0000] {subprocess.py:93} INFO -     step_info = f(self, *args, **kwargs)
+[2026-07-28T00:35:08.698+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 275, in _wrap
+[2026-07-28T00:35:08.699+0000] {subprocess.py:93} INFO -     return f(self, *args, **kwargs)
+[2026-07-28T00:35:08.699+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 746, in run
+[2026-07-28T00:35:08.700+0000] {subprocess.py:93} INFO -     self.normalize(loader_file_format=loader_file_format)
+[2026-07-28T00:35:08.700+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 226, in _wrap
+[2026-07-28T00:35:08.701+0000] {subprocess.py:93} INFO -     step_info = f(self, *args, **kwargs)
+[2026-07-28T00:35:08.701+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 180, in _wrap
+[2026-07-28T00:35:08.702+0000] {subprocess.py:93} INFO -     rv = f(self, *args, **kwargs)
+[2026-07-28T00:35:08.702+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 275, in _wrap
+[2026-07-28T00:35:08.703+0000] {subprocess.py:93} INFO -     return f(self, *args, **kwargs)
+[2026-07-28T00:35:08.703+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 557, in normalize
+[2026-07-28T00:35:08.703+0000] {subprocess.py:93} INFO -     raise PipelineStepFailed(
+[2026-07-28T00:35:08.704+0000] {subprocess.py:93} INFO - dlt.pipeline.exceptions.PipelineStepFailed: Pipeline execution failed at stage normalize when processing package 1785198907.3771846 with exception:
+[2026-07-28T00:35:08.704+0000] {subprocess.py:93} INFO - 
+[2026-07-28T00:35:08.705+0000] {subprocess.py:93} INFO - <class 'FileNotFoundError'>
+[2026-07-28T00:35:08.705+0000] {subprocess.py:93} INFO - [Errno 2] No such file or directory: '/home/***/.dlt/pipelines/flex_staging_pipeline/load/new/1785198907.3771846/schema_updates.json'
+[2026-07-28T00:35:09.042+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-07-28T00:35:09.073+0000] {taskinstance.py:3301} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-07-28T00:35:09.081+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=flex_eau_pipeline, task_id=ingestion_mysql_staging, run_id=scheduled__2026-07-27T00:00:00+00:00, execution_date=20260727T000000, start_date=20260728T003502, end_date=20260728T003509
+[2026-07-28T00:35:09.107+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-28T00:35:09.108+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 53 for task ingestion_mysql_staging (Bash command failed. The command returned a non-zero exit code 1.; 255)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2995, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 3149, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 3173, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-07-28T00:35:09.127+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 1
+[2026-07-28T00:35:09.160+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-28T00:35:09.169+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

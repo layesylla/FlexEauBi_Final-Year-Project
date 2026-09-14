@@ -1,0 +1,53 @@
+[2026-07-26T00:03:52.010+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-26T00:03:52.052+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flex_eau_pipeline.fact_production scheduled__2026-07-25T00:00:00+00:00 [queued]>
+[2026-07-26T00:03:52.071+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flex_eau_pipeline.fact_production scheduled__2026-07-25T00:00:00+00:00 [queued]>
+[2026-07-26T00:03:52.073+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2026-07-26T00:03:52.110+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): fact_production> on 2026-07-25 00:00:00+00:00
+[2026-07-26T00:03:52.121+0000] {standard_task_runner.py:72} INFO - Started process 8438 to run task
+[2026-07-26T00:03:52.130+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flex_eau_pipeline', 'fact_production', 'scheduled__2026-07-25T00:00:00+00:00', '--job-id', '45', '--raw', '--subdir', 'DAGS_FOLDER/flex_eau_pipeline.py', '--cfg-path', '/tmp/tmp5sojimsn']
+[2026-07-26T00:03:52.136+0000] {standard_task_runner.py:105} INFO - Job 45: Subtask fact_production
+[2026-07-26T00:03:52.271+0000] {task_command.py:467} INFO - Running <TaskInstance: flex_eau_pipeline.fact_production scheduled__2026-07-25T00:00:00+00:00 [running]> on host b1da4d7b7394
+[2026-07-26T00:03:52.503+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='flex-eau' AIRFLOW_CTX_DAG_ID='flex_eau_pipeline' AIRFLOW_CTX_TASK_ID='fact_production' AIRFLOW_CTX_EXECUTION_DATE='2026-07-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-25T00:00:00+00:00'
+[2026-07-26T00:03:52.507+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-26T00:03:52.535+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-26T00:03:52.536+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python spark_jobs/facts/fact_production.py']
+[2026-07-26T00:03:52.581+0000] {subprocess.py:86} INFO - Output:
+[2026-07-26T00:04:01.484+0000] {subprocess.py:93} INFO - 26/07/26 00:04:01 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-07-26T00:04:02.353+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-07-26T00:04:02.354+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-07-26T00:04:05.565+0000] {subprocess.py:93} INFO - 26/07/26 00:04:05 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2026-07-26T00:04:05.572+0000] {subprocess.py:93} INFO - 26/07/26 00:04:05 WARN Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+[2026-07-26T00:04:33.563+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 0) / 1][Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                  (0 + 1) / 1][Stage 1:>                  (0 + 1) / 1][Stage 0:>    (0 + 1) / 1][Stage 1:>    (0 + 1) / 1][Stage 2:>    (0 + 1) / 1][Stage 0:>                  (0 + 1) / 1][Stage 1:>                  (0 + 1) / 1][Stage 0:>                                                          (0 + 1) / 1][Stage 5:>    (0 + 1) / 1][Stage 7:>    (0 + 1) / 1][Stage 9:>    (0 + 1) / 1]                                                                                [Stage 25:>                                                         (0 + 1) / 1]                                                                                Nombre lignes : 360
+[2026-07-26T00:04:33.564+0000] {subprocess.py:93} INFO - +--------+-------+----------+------------+-------------+-----------------+--------------+-----------------+
+[2026-07-26T00:04:33.565+0000] {subprocess.py:93} INFO - |date_key|geo_key|forage_key|ancien_index|nouveau_index|volume_produit_m3|nb_productions|compteur_anomalie|
+[2026-07-26T00:04:33.565+0000] {subprocess.py:93} INFO - +--------+-------+----------+------------+-------------+-----------------+--------------+-----------------+
+[2026-07-26T00:04:33.566+0000] {subprocess.py:93} INFO - |20240131|5      |0         |26500       |31100        |4600             |1             |0                |
+[2026-07-26T00:04:33.567+0000] {subprocess.py:93} INFO - |20240131|5      |8         |27500       |32969        |5469             |1             |0                |
+[2026-07-26T00:04:33.567+0000] {subprocess.py:93} INFO - |20240131|4      |1         |28500       |32545        |4045             |1             |0                |
+[2026-07-26T00:04:33.568+0000] {subprocess.py:93} INFO - |20240131|6      |2         |29500       |33819        |4319             |1             |0                |
+[2026-07-26T00:04:33.569+0000] {subprocess.py:93} INFO - |20240131|7      |12        |30500       |34459        |3959             |1             |0                |
+[2026-07-26T00:04:33.569+0000] {subprocess.py:93} INFO - |20240131|9      |9         |31500       |36840        |5340             |1             |0                |
+[2026-07-26T00:04:33.570+0000] {subprocess.py:93} INFO - |20240131|8      |3         |32500       |37823        |5323             |1             |0                |
+[2026-07-26T00:04:33.570+0000] {subprocess.py:93} INFO - |20240131|0      |4         |33500       |38594        |5094             |1             |0                |
+[2026-07-26T00:04:33.571+0000] {subprocess.py:93} INFO - |20240131|3      |13        |34500       |38502        |4002             |1             |0                |
+[2026-07-26T00:04:33.572+0000] {subprocess.py:93} INFO - |20240131|1      |10        |35500       |40730        |5230             |1             |0                |
+[2026-07-26T00:04:33.572+0000] {subprocess.py:93} INFO - |20240131|10     |5         |36500       |41145        |4645             |1             |0                |
+[2026-07-26T00:04:33.573+0000] {subprocess.py:93} INFO - |20240131|16     |6         |37500       |41533        |4033             |1             |0                |
+[2026-07-26T00:04:33.573+0000] {subprocess.py:93} INFO - |20240131|11     |11        |38500       |43233        |4733             |1             |0                |
+[2026-07-26T00:04:33.574+0000] {subprocess.py:93} INFO - |20240131|18     |7         |39500       |43567        |4067             |1             |0                |
+[2026-07-26T00:04:33.575+0000] {subprocess.py:93} INFO - |20240131|19     |14        |40500       |45137        |4637             |1             |0                |
+[2026-07-26T00:04:33.576+0000] {subprocess.py:93} INFO - |20240229|5      |0         |27000       |32484        |5484             |1             |0                |
+[2026-07-26T00:04:33.576+0000] {subprocess.py:93} INFO - |20240229|5      |8         |28000       |32009        |4009             |1             |0                |
+[2026-07-26T00:04:33.577+0000] {subprocess.py:93} INFO - |20240229|4      |1         |29000       |33096        |4096             |1             |0                |
+[2026-07-26T00:04:33.577+0000] {subprocess.py:93} INFO - |20240229|6      |2         |30000       |34950        |4950             |1             |0                |
+[2026-07-26T00:04:33.578+0000] {subprocess.py:93} INFO - |20240229|7      |12        |31000       |35965        |4965             |1             |0                |
+[2026-07-26T00:04:33.578+0000] {subprocess.py:93} INFO - +--------+-------+----------+------------+-------------+-----------------+--------------+-----------------+
+[2026-07-26T00:04:33.579+0000] {subprocess.py:93} INFO - only showing top 20 rows
+[2026-07-26T00:04:33.580+0000] {subprocess.py:93} INFO - 
+[2026-07-26T00:04:33.580+0000] {subprocess.py:93} INFO - FACT_PRODUCTION créée avec succès
+[2026-07-26T00:04:34.087+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-26T00:04:34.144+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-26T00:04:34.145+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=flex_eau_pipeline, task_id=fact_production, run_id=scheduled__2026-07-25T00:00:00+00:00, execution_date=20260725T000000, start_date=20260726T000352, end_date=20260726T000434
+[2026-07-26T00:04:34.198+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2026-07-26T00:04:34.226+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-26T00:04:34.231+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

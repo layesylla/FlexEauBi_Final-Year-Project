@@ -1,0 +1,53 @@
+[2026-08-11T18:13:52.822+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-11T18:13:52.875+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flex_eau_pipeline.fact_energie scheduled__2026-08-10T00:00:00+00:00 [queued]>
+[2026-08-11T18:13:52.899+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flex_eau_pipeline.fact_energie scheduled__2026-08-10T00:00:00+00:00 [queued]>
+[2026-08-11T18:13:52.900+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2026-08-11T18:13:52.936+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): fact_energie> on 2026-08-10 00:00:00+00:00
+[2026-08-11T18:13:52.946+0000] {standard_task_runner.py:72} INFO - Started process 2420 to run task
+[2026-08-11T18:13:52.953+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flex_eau_pipeline', 'fact_energie', 'scheduled__2026-08-10T00:00:00+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/flex_eau_pipeline.py', '--cfg-path', '/tmp/tmp6jh6n216']
+[2026-08-11T18:13:52.958+0000] {standard_task_runner.py:105} INFO - Job 62: Subtask fact_energie
+[2026-08-11T18:13:53.230+0000] {task_command.py:467} INFO - Running <TaskInstance: flex_eau_pipeline.fact_energie scheduled__2026-08-10T00:00:00+00:00 [running]> on host b97d7a013992
+[2026-08-11T18:13:53.667+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='flex-eau' AIRFLOW_CTX_DAG_ID='flex_eau_pipeline' AIRFLOW_CTX_TASK_ID='fact_energie' AIRFLOW_CTX_EXECUTION_DATE='2026-08-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-08-10T00:00:00+00:00'
+[2026-08-11T18:13:53.671+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-11T18:13:53.739+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-08-11T18:13:53.741+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python spark_jobs/facts/fact_energie.py']
+[2026-08-11T18:13:53.813+0000] {subprocess.py:86} INFO - Output:
+[2026-08-11T18:14:09.606+0000] {subprocess.py:93} INFO - 26/08/11 18:14:09 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-08-11T18:14:11.703+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-08-11T18:14:11.718+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-08-11T18:14:16.309+0000] {subprocess.py:93} INFO - 26/08/11 18:14:16 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2026-08-11T18:14:59.129+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 0) / 1][Stage 0:>    (0 + 0) / 1][Stage 1:>    (0 + 0) / 1][Stage 2:>    (0 + 0) / 1]26/08/11 18:14:59 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-08-11T18:15:23.394+0000] {subprocess.py:93} INFO - [Stage 0:>    (0 + 1) / 1][Stage 1:>    (0 + 1) / 1][Stage 2:>    (0 + 1) / 1][Stage 0:>                  (0 + 1) / 1][Stage 1:>                  (0 + 1) / 1][Stage 0:>                                                          (0 + 1) / 1][Stage 0:>                  (0 + 1) / 1][Stage 5:>                  (0 + 1) / 1][Stage 0:>    (0 + 1) / 1][Stage 5:>    (0 + 1) / 1][Stage 7:>    (0 + 1) / 1][Stage 5:>    (0 + 1) / 1][Stage 7:>    (0 + 1) / 1][Stage 9:>    (0 + 1) / 1]                                                                                [Stage 16:>                                                         (0 + 1) / 1]                                                                                [Stage 25:>                                                         (0 + 1) / 1]                                                                                [Stage 36:>                                                         (0 + 1) / 1]                                                                                Nombre lignes : 360
+[2026-08-11T18:15:23.395+0000] {subprocess.py:93} INFO - +--------+-------+----------+------------+-----------------+----------------+
+[2026-08-11T18:15:23.397+0000] {subprocess.py:93} INFO - |date_key|geo_key|forage_key|kwh_consomme|cout_energie_fcfa|nb_consommations|
+[2026-08-11T18:15:23.398+0000] {subprocess.py:93} INFO - +--------+-------+----------+------------+-----------------+----------------+
+[2026-08-11T18:15:23.399+0000] {subprocess.py:93} INFO - |20240131|5      |0         |475         |184120.0         |1               |
+[2026-08-11T18:15:23.400+0000] {subprocess.py:93} INFO - |20240229|5      |0         |576         |199952.0         |1               |
+[2026-08-11T18:15:23.403+0000] {subprocess.py:93} INFO - |20240331|5      |0         |470         |182006.0         |1               |
+[2026-08-11T18:15:23.406+0000] {subprocess.py:93} INFO - |20240430|5      |0         |562         |178558.0         |1               |
+[2026-08-11T18:15:23.419+0000] {subprocess.py:93} INFO - |20240531|5      |0         |445         |194550.0         |1               |
+[2026-08-11T18:15:23.420+0000] {subprocess.py:93} INFO - |20240630|5      |0         |596         |129434.0         |1               |
+[2026-08-11T18:15:23.422+0000] {subprocess.py:93} INFO - |20240731|5      |0         |528         |188308.0         |1               |
+[2026-08-11T18:15:23.431+0000] {subprocess.py:93} INFO - |20240831|5      |0         |468         |132954.0         |1               |
+[2026-08-11T18:15:23.433+0000] {subprocess.py:93} INFO - |20240930|5      |0         |555         |151359.0         |1               |
+[2026-08-11T18:15:23.443+0000] {subprocess.py:93} INFO - |20241031|5      |0         |526         |199245.0         |1               |
+[2026-08-11T18:15:23.445+0000] {subprocess.py:93} INFO - |20241130|5      |0         |410         |143425.0         |1               |
+[2026-08-11T18:15:23.446+0000] {subprocess.py:93} INFO - |20241231|5      |0         |461         |171871.0         |1               |
+[2026-08-11T18:15:23.447+0000] {subprocess.py:93} INFO - |20250131|5      |0         |465         |174726.0         |1               |
+[2026-08-11T18:15:23.449+0000] {subprocess.py:93} INFO - |20250228|5      |0         |488         |132967.0         |1               |
+[2026-08-11T18:15:23.451+0000] {subprocess.py:93} INFO - |20250331|5      |0         |496         |193837.0         |1               |
+[2026-08-11T18:15:23.452+0000] {subprocess.py:93} INFO - |20250430|5      |0         |433         |126209.0         |1               |
+[2026-08-11T18:15:23.464+0000] {subprocess.py:93} INFO - |20250531|5      |0         |576         |133437.0         |1               |
+[2026-08-11T18:15:23.466+0000] {subprocess.py:93} INFO - |20250630|5      |0         |439         |159434.0         |1               |
+[2026-08-11T18:15:23.468+0000] {subprocess.py:93} INFO - |20250731|5      |0         |573         |188313.0         |1               |
+[2026-08-11T18:15:23.479+0000] {subprocess.py:93} INFO - |20250831|5      |0         |533         |183049.0         |1               |
+[2026-08-11T18:15:23.482+0000] {subprocess.py:93} INFO - +--------+-------+----------+------------+-----------------+----------------+
+[2026-08-11T18:15:23.483+0000] {subprocess.py:93} INFO - only showing top 20 rows
+[2026-08-11T18:15:23.485+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:15:23.486+0000] {subprocess.py:93} INFO - FACT_ENERGIE créée avec succès
+[2026-08-11T18:15:24.181+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-08-11T18:15:24.272+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-11T18:15:24.274+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=flex_eau_pipeline, task_id=fact_energie, run_id=scheduled__2026-08-10T00:00:00+00:00, execution_date=20260810T000000, start_date=20260811T181352, end_date=20260811T181524
+[2026-08-11T18:15:24.332+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2026-08-11T18:15:24.378+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-08-11T18:15:24.384+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

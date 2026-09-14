@@ -1,0 +1,233 @@
+[2026-07-28T00:29:48.914+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-28T00:29:48.977+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flex_eau_pipeline.ingestion_mysql_staging scheduled__2026-07-26T00:00:00+00:00 [queued]>
+[2026-07-28T00:29:48.998+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flex_eau_pipeline.ingestion_mysql_staging scheduled__2026-07-26T00:00:00+00:00 [queued]>
+[2026-07-28T00:29:48.999+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2026-07-28T00:29:49.024+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): ingestion_mysql_staging> on 2026-07-26 00:00:00+00:00
+[2026-07-28T00:29:49.031+0000] {standard_task_runner.py:72} INFO - Started process 174 to run task
+[2026-07-28T00:29:49.042+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flex_eau_pipeline', 'ingestion_mysql_staging', 'scheduled__2026-07-26T00:00:00+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/flex_eau_pipeline.py', '--cfg-path', '/tmp/tmpnizyidir']
+[2026-07-28T00:29:49.049+0000] {standard_task_runner.py:105} INFO - Job 50: Subtask ingestion_mysql_staging
+[2026-07-28T00:29:49.176+0000] {task_command.py:467} INFO - Running <TaskInstance: flex_eau_pipeline.ingestion_mysql_staging scheduled__2026-07-26T00:00:00+00:00 [running]> on host b1da4d7b7394
+[2026-07-28T00:29:49.383+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='flex-eau' AIRFLOW_CTX_DAG_ID='flex_eau_pipeline' AIRFLOW_CTX_TASK_ID='ingestion_mysql_staging' AIRFLOW_CTX_EXECUTION_DATE='2026-07-26T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-26T00:00:00+00:00'
+[2026-07-28T00:29:49.384+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-28T00:29:49.420+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-28T00:29:49.421+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -e\n        python ingestion/mysql_to_staging.py\n        ']
+[2026-07-28T00:29:49.436+0000] {subprocess.py:86} INFO - Output:
+[2026-07-28T00:29:58.362+0000] {subprocess.py:93} INFO - 
+[2026-07-28T00:29:58.363+0000] {subprocess.py:93} INFO - ===== regions =====
+[2026-07-28T00:29:58.379+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-07-28T00:29:58.380+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+[2026-07-28T00:29:58.381+0000] {subprocess.py:93} INFO -     return fn()
+[2026-07-28T00:29:58.382+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+[2026-07-28T00:29:58.382+0000] {subprocess.py:93} INFO -     return _ConnectionFairy._checkout(self)
+[2026-07-28T00:29:58.383+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+[2026-07-28T00:29:58.384+0000] {subprocess.py:93} INFO -     fairy = _ConnectionRecord.checkout(pool)
+[2026-07-28T00:29:58.384+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+[2026-07-28T00:29:58.385+0000] {subprocess.py:93} INFO -     rec = pool._do_get()
+[2026-07-28T00:29:58.386+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+[2026-07-28T00:29:58.387+0000] {subprocess.py:93} INFO -     self._dec_overflow()
+[2026-07-28T00:29:58.387+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+[2026-07-28T00:29:58.389+0000] {subprocess.py:93} INFO -     compat.raise_(
+[2026-07-28T00:29:58.389+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-07-28T00:29:58.390+0000] {subprocess.py:93} INFO -     raise exception
+[2026-07-28T00:29:58.390+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+[2026-07-28T00:29:58.391+0000] {subprocess.py:93} INFO -     return self._create_connection()
+[2026-07-28T00:29:58.391+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+[2026-07-28T00:29:58.392+0000] {subprocess.py:93} INFO -     return _ConnectionRecord(self)
+[2026-07-28T00:29:58.393+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+[2026-07-28T00:29:58.393+0000] {subprocess.py:93} INFO -     self.__connect()
+[2026-07-28T00:29:58.394+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+[2026-07-28T00:29:58.394+0000] {subprocess.py:93} INFO -     pool.logger.debug("Error on connect(): %s", e)
+[2026-07-28T00:29:58.395+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+[2026-07-28T00:29:58.395+0000] {subprocess.py:93} INFO -     compat.raise_(
+[2026-07-28T00:29:58.396+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-07-28T00:29:58.396+0000] {subprocess.py:93} INFO -     raise exception
+[2026-07-28T00:29:58.397+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+[2026-07-28T00:29:58.397+0000] {subprocess.py:93} INFO -     self.dbapi_connection = connection = pool._invoke_creator(self)
+[2026-07-28T00:29:58.398+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+[2026-07-28T00:29:58.398+0000] {subprocess.py:93} INFO -     return dialect.connect(*cargs, **cparams)
+[2026-07-28T00:29:58.399+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+[2026-07-28T00:29:58.399+0000] {subprocess.py:93} INFO -     return self.dbapi.connect(*cargs, **cparams)
+[2026-07-28T00:29:58.400+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pymysql/connections.py", line 365, in __init__
+[2026-07-28T00:29:58.400+0000] {subprocess.py:93} INFO -     self.connect()
+[2026-07-28T00:29:58.401+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pymysql/connections.py", line 681, in connect
+[2026-07-28T00:29:58.401+0000] {subprocess.py:93} INFO -     self._request_authentication()
+[2026-07-28T00:29:58.402+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pymysql/connections.py", line 958, in _request_authentication
+[2026-07-28T00:29:58.402+0000] {subprocess.py:93} INFO -     auth_packet = self._read_packet()
+[2026-07-28T00:29:58.403+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pymysql/connections.py", line 782, in _read_packet
+[2026-07-28T00:29:58.403+0000] {subprocess.py:93} INFO -     packet.raise_for_error()
+[2026-07-28T00:29:58.404+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+[2026-07-28T00:29:58.404+0000] {subprocess.py:93} INFO -     err.raise_mysql_exception(self._data)
+[2026-07-28T00:29:58.405+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+[2026-07-28T00:29:58.405+0000] {subprocess.py:93} INFO -     raise errorclass(errno, errval)
+[2026-07-28T00:29:58.406+0000] {subprocess.py:93} INFO - pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+[2026-07-28T00:29:58.406+0000] {subprocess.py:93} INFO - 
+[2026-07-28T00:29:58.407+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2026-07-28T00:29:58.408+0000] {subprocess.py:93} INFO - 
+[2026-07-28T00:29:58.408+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-07-28T00:29:58.409+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/extract/pipe_iterator.py", line 277, in _get_source_item
+[2026-07-28T00:29:58.409+0000] {subprocess.py:93} INFO -     pipe_item = next(gen)
+[2026-07-28T00:29:58.410+0000] {subprocess.py:93} INFO -   File "ingestion/mysql_to_staging.py", line 19, in resource
+[2026-07-28T00:29:58.411+0000] {subprocess.py:93} INFO -     df = pd.read_sql(query, mysql_engine)
+[2026-07-28T00:29:58.412+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 633, in read_sql
+[2026-07-28T00:29:58.412+0000] {subprocess.py:93} INFO -     with pandasSQL_builder(con) as pandas_sql:
+[2026-07-28T00:29:58.413+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 832, in pandasSQL_builder
+[2026-07-28T00:29:58.413+0000] {subprocess.py:93} INFO -     return SQLDatabase(con, schema, need_transaction)
+[2026-07-28T00:29:58.414+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 1539, in __init__
+[2026-07-28T00:29:58.414+0000] {subprocess.py:93} INFO -     con = self.exit_stack.enter_context(con.connect())
+[2026-07-28T00:29:58.415+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+[2026-07-28T00:29:58.416+0000] {subprocess.py:93} INFO -     return self._connection_cls(self, close_with_result=close_with_result)
+[2026-07-28T00:29:58.416+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+[2026-07-28T00:29:58.417+0000] {subprocess.py:93} INFO -     else engine.raw_connection()
+[2026-07-28T00:29:58.417+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+[2026-07-28T00:29:58.418+0000] {subprocess.py:93} INFO -     return self._wrap_pool_connect(self.pool.connect, _connection)
+[2026-07-28T00:29:58.418+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+[2026-07-28T00:29:58.419+0000] {subprocess.py:93} INFO -     Connection._handle_dbapi_exception_noconnection(
+[2026-07-28T00:29:58.419+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+[2026-07-28T00:29:58.420+0000] {subprocess.py:93} INFO -     util.raise_(
+[2026-07-28T00:29:58.420+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-07-28T00:29:58.421+0000] {subprocess.py:93} INFO -     raise exception
+[2026-07-28T00:29:58.421+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+[2026-07-28T00:29:58.422+0000] {subprocess.py:93} INFO -     return fn()
+[2026-07-28T00:29:58.423+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+[2026-07-28T00:29:58.423+0000] {subprocess.py:93} INFO -     return _ConnectionFairy._checkout(self)
+[2026-07-28T00:29:58.424+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+[2026-07-28T00:29:58.425+0000] {subprocess.py:93} INFO -     fairy = _ConnectionRecord.checkout(pool)
+[2026-07-28T00:29:58.425+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+[2026-07-28T00:29:58.426+0000] {subprocess.py:93} INFO -     rec = pool._do_get()
+[2026-07-28T00:29:58.427+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+[2026-07-28T00:29:58.427+0000] {subprocess.py:93} INFO -     self._dec_overflow()
+[2026-07-28T00:29:58.428+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+[2026-07-28T00:29:58.429+0000] {subprocess.py:93} INFO -     compat.raise_(
+[2026-07-28T00:29:58.430+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-07-28T00:29:58.430+0000] {subprocess.py:93} INFO -     raise exception
+[2026-07-28T00:29:58.431+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+[2026-07-28T00:29:58.432+0000] {subprocess.py:93} INFO -     return self._create_connection()
+[2026-07-28T00:29:58.432+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+[2026-07-28T00:29:58.433+0000] {subprocess.py:93} INFO -     return _ConnectionRecord(self)
+[2026-07-28T00:29:58.433+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+[2026-07-28T00:29:58.434+0000] {subprocess.py:93} INFO -     self.__connect()
+[2026-07-28T00:29:58.434+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+[2026-07-28T00:29:58.435+0000] {subprocess.py:93} INFO -     pool.logger.debug("Error on connect(): %s", e)
+[2026-07-28T00:29:58.435+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+[2026-07-28T00:29:58.435+0000] {subprocess.py:93} INFO -     compat.raise_(
+[2026-07-28T00:29:58.436+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-07-28T00:29:58.436+0000] {subprocess.py:93} INFO -     raise exception
+[2026-07-28T00:29:58.437+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+[2026-07-28T00:29:58.437+0000] {subprocess.py:93} INFO -     self.dbapi_connection = connection = pool._invoke_creator(self)
+[2026-07-28T00:29:58.438+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+[2026-07-28T00:29:58.438+0000] {subprocess.py:93} INFO -     return dialect.connect(*cargs, **cparams)
+[2026-07-28T00:29:58.439+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+[2026-07-28T00:29:58.439+0000] {subprocess.py:93} INFO -     return self.dbapi.connect(*cargs, **cparams)
+[2026-07-28T00:29:58.440+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pymysql/connections.py", line 365, in __init__
+[2026-07-28T00:29:58.440+0000] {subprocess.py:93} INFO -     self.connect()
+[2026-07-28T00:29:58.441+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pymysql/connections.py", line 681, in connect
+[2026-07-28T00:29:58.441+0000] {subprocess.py:93} INFO -     self._request_authentication()
+[2026-07-28T00:29:58.442+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pymysql/connections.py", line 958, in _request_authentication
+[2026-07-28T00:29:58.442+0000] {subprocess.py:93} INFO -     auth_packet = self._read_packet()
+[2026-07-28T00:29:58.443+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pymysql/connections.py", line 782, in _read_packet
+[2026-07-28T00:29:58.443+0000] {subprocess.py:93} INFO -     packet.raise_for_error()
+[2026-07-28T00:29:58.444+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+[2026-07-28T00:29:58.445+0000] {subprocess.py:93} INFO -     err.raise_mysql_exception(self._data)
+[2026-07-28T00:29:58.445+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+[2026-07-28T00:29:58.446+0000] {subprocess.py:93} INFO -     raise errorclass(errno, errval)
+[2026-07-28T00:29:58.447+0000] {subprocess.py:93} INFO - sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+[2026-07-28T00:29:58.447+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2026-07-28T00:29:58.448+0000] {subprocess.py:93} INFO - 
+[2026-07-28T00:29:58.448+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2026-07-28T00:29:58.449+0000] {subprocess.py:93} INFO - 
+[2026-07-28T00:29:58.449+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-07-28T00:29:58.449+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 471, in extract
+[2026-07-28T00:29:58.450+0000] {subprocess.py:93} INFO -     self._extract_source(
+[2026-07-28T00:29:58.450+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 1239, in _extract_source
+[2026-07-28T00:29:58.451+0000] {subprocess.py:93} INFO -     load_id = extract.extract(
+[2026-07-28T00:29:58.451+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/extract/extract.py", line 421, in extract
+[2026-07-28T00:29:58.452+0000] {subprocess.py:93} INFO -     self._extract_single_source(
+[2026-07-28T00:29:58.452+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/extract/extract.py", line 344, in _extract_single_source
+[2026-07-28T00:29:58.452+0000] {subprocess.py:93} INFO -     for pipe_item in pipes:
+[2026-07-28T00:29:58.453+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/extract/pipe_iterator.py", line 162, in __next__
+[2026-07-28T00:29:58.453+0000] {subprocess.py:93} INFO -     pipe_item = self._get_source_item()
+[2026-07-28T00:29:58.454+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/extract/pipe_iterator.py", line 307, in _get_source_item
+[2026-07-28T00:29:58.454+0000] {subprocess.py:93} INFO -     raise ResourceExtractionError(pipe.name, gen, str(ex), "generator") from ex
+[2026-07-28T00:29:58.455+0000] {subprocess.py:93} INFO - dlt.extract.exceptions.ResourceExtractionError: In processing pipe regions: extraction of resource regions in generator resource caused an exception: (pymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+[2026-07-28T00:29:58.455+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2026-07-28T00:29:58.456+0000] {subprocess.py:93} INFO - 
+[2026-07-28T00:29:58.456+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2026-07-28T00:29:58.457+0000] {subprocess.py:93} INFO - 
+[2026-07-28T00:29:58.457+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-07-28T00:29:58.458+0000] {subprocess.py:93} INFO -   File "ingestion/mysql_to_staging.py", line 32, in <module>
+[2026-07-28T00:29:58.458+0000] {subprocess.py:93} INFO -     load_info = pipeline.run(
+[2026-07-28T00:29:58.459+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 226, in _wrap
+[2026-07-28T00:29:58.460+0000] {subprocess.py:93} INFO -     step_info = f(self, *args, **kwargs)
+[2026-07-28T00:29:58.460+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 275, in _wrap
+[2026-07-28T00:29:58.461+0000] {subprocess.py:93} INFO -     return f(self, *args, **kwargs)
+[2026-07-28T00:29:58.462+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 735, in run
+[2026-07-28T00:29:58.463+0000] {subprocess.py:93} INFO -     self.extract(
+[2026-07-28T00:29:58.463+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 226, in _wrap
+[2026-07-28T00:29:58.464+0000] {subprocess.py:93} INFO -     step_info = f(self, *args, **kwargs)
+[2026-07-28T00:29:58.465+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 180, in _wrap
+[2026-07-28T00:29:58.465+0000] {subprocess.py:93} INFO -     rv = f(self, *args, **kwargs)
+[2026-07-28T00:29:58.466+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 166, in _wrap
+[2026-07-28T00:29:58.466+0000] {subprocess.py:93} INFO -     return f(self, *args, **kwargs)
+[2026-07-28T00:29:58.467+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 275, in _wrap
+[2026-07-28T00:29:58.468+0000] {subprocess.py:93} INFO -     return f(self, *args, **kwargs)
+[2026-07-28T00:29:58.468+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/dlt/pipeline/pipeline.py", line 492, in extract
+[2026-07-28T00:29:58.468+0000] {subprocess.py:93} INFO -     raise PipelineStepFailed(
+[2026-07-28T00:29:58.469+0000] {subprocess.py:93} INFO - dlt.pipeline.exceptions.PipelineStepFailed: Pipeline execution failed at stage extract when processing package 1785198597.777453 with exception:
+[2026-07-28T00:29:58.470+0000] {subprocess.py:93} INFO - 
+[2026-07-28T00:29:58.470+0000] {subprocess.py:93} INFO - <class 'dlt.extract.exceptions.ResourceExtractionError'>
+[2026-07-28T00:29:58.471+0000] {subprocess.py:93} INFO - In processing pipe regions: extraction of resource regions in generator resource caused an exception: (pymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+[2026-07-28T00:29:58.471+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2026-07-28T00:30:01.455+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-07-28T00:30:01.471+0000] {taskinstance.py:3301} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-07-28T00:30:01.479+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=flex_eau_pipeline, task_id=ingestion_mysql_staging, run_id=scheduled__2026-07-26T00:00:00+00:00, execution_date=20260726T000000, start_date=20260728T002948, end_date=20260728T003001
+[2026-07-28T00:30:01.495+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-28T00:30:01.496+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 50 for task ingestion_mysql_staging (Bash command failed. The command returned a non-zero exit code 1.; 174)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2995, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 3149, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 3173, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-07-28T00:30:01.536+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 1
+[2026-07-28T00:30:01.590+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-28T00:30:01.595+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

@@ -1,0 +1,52 @@
+[2026-08-11T18:10:10.018+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-11T18:10:10.111+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flex_eau_pipeline.dim_forage scheduled__2026-08-10T00:00:00+00:00 [queued]>
+[2026-08-11T18:10:10.132+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flex_eau_pipeline.dim_forage scheduled__2026-08-10T00:00:00+00:00 [queued]>
+[2026-08-11T18:10:10.134+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2026-08-11T18:10:10.160+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): dim_forage> on 2026-08-10 00:00:00+00:00
+[2026-08-11T18:10:10.171+0000] {standard_task_runner.py:72} INFO - Started process 334 to run task
+[2026-08-11T18:10:10.184+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flex_eau_pipeline', 'dim_forage', 'scheduled__2026-08-10T00:00:00+00:00', '--job-id', '57', '--raw', '--subdir', 'DAGS_FOLDER/flex_eau_pipeline.py', '--cfg-path', '/tmp/tmpkwbl9m8x']
+[2026-08-11T18:10:10.195+0000] {standard_task_runner.py:105} INFO - Job 57: Subtask dim_forage
+[2026-08-11T18:10:10.431+0000] {task_command.py:467} INFO - Running <TaskInstance: flex_eau_pipeline.dim_forage scheduled__2026-08-10T00:00:00+00:00 [running]> on host b97d7a013992
+[2026-08-11T18:10:10.804+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='flex-eau' AIRFLOW_CTX_DAG_ID='flex_eau_pipeline' AIRFLOW_CTX_TASK_ID='dim_forage' AIRFLOW_CTX_EXECUTION_DATE='2026-08-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-08-10T00:00:00+00:00'
+[2026-08-11T18:10:10.810+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-11T18:10:10.861+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-08-11T18:10:10.863+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python spark_jobs/dimensions/dim_forage.py']
+[2026-08-11T18:10:10.888+0000] {subprocess.py:86} INFO - Output:
+[2026-08-11T18:10:33.982+0000] {subprocess.py:93} INFO - 26/08/11 18:10:33 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-08-11T18:10:39.659+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-08-11T18:10:39.681+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-08-11T18:10:57.608+0000] {subprocess.py:93} INFO - 26/08/11 18:10:57 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2026-08-11T18:10:57.630+0000] {subprocess.py:93} INFO - 26/08/11 18:10:57 WARN Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+[2026-08-11T18:10:57.639+0000] {subprocess.py:93} INFO - 26/08/11 18:10:57 WARN Utils: Service 'SparkUI' could not bind on port 4042. Attempting port 4043.
+[2026-08-11T18:10:57.651+0000] {subprocess.py:93} INFO - 26/08/11 18:10:57 WARN Utils: Service 'SparkUI' could not bind on port 4043. Attempting port 4044.
+[2026-08-11T18:11:57.668+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 0) / 1][Stage 0:>                  (0 + 0) / 1][Stage 1:>                  (0 + 0) / 1]26/08/11 18:11:57 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-08-11T18:12:12.582+0000] {subprocess.py:93} INFO - 26/08/11 18:12:12 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-08-11T18:12:27.644+0000] {subprocess.py:93} INFO - 26/08/11 18:12:27 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-08-11T18:12:46.754+0000] {subprocess.py:93} INFO - [Stage 0:>                  (0 + 1) / 1][Stage 1:>                  (0 + 1) / 1]                                                                                [Stage 20:>                                                         (0 + 1) / 1]                                                                                Nombre lignes : 15
+[2026-08-11T18:12:46.756+0000] {subprocess.py:93} INFO - +----------+---------+-----------+--------------------------+-------+----------+-----------------+------------------+------+---------+
+[2026-08-11T18:12:46.757+0000] {subprocess.py:93} INFO - |forage_key|forage_id|code_forage|nom_forage                |site_id|commune_id|source_energie_id|source_energie    |arrete|transfere|
+[2026-08-11T18:12:46.759+0000] {subprocess.py:93} INFO - +----------+---------+-----------+--------------------------+-------+----------+-----------------+------------------+------+---------+
+[2026-08-11T18:12:46.760+0000] {subprocess.py:93} INFO - |0         |16       |F-SIB-01   |Forage Principal Sibassor |21     |64        |1                |Electricite       |0     |0        |
+[2026-08-11T18:12:46.761+0000] {subprocess.py:93} INFO - |1         |18       |F-NDB-01   |Forage Ndiebel            |22     |47        |1                |Electricite       |0     |0        |
+[2026-08-11T18:12:46.762+0000] {subprocess.py:93} INFO - |2         |19       |F-GAN-01   |Forage Gandiaye           |23     |66        |1                |Electricite       |0     |0        |
+[2026-08-11T18:12:46.763+0000] {subprocess.py:93} INFO - |3         |22       |F-NGL-01   |Forage Nguelou            |26     |36        |1                |Electricite       |0     |0        |
+[2026-08-11T18:12:46.764+0000] {subprocess.py:93} INFO - |4         |23       |F-KYM-01   |Forage Kayemor            |27     |49        |1                |Electricite       |0     |0        |
+[2026-08-11T18:12:46.765+0000] {subprocess.py:93} INFO - |5         |26       |F-BKL-01   |Forage Birkelane          |31     |69        |1                |Electricite       |0     |0        |
+[2026-08-11T18:12:46.766+0000] {subprocess.py:93} INFO - |6         |27       |F-GNI-01   |Forage Gniby              |32     |8         |1                |Electricite       |0     |0        |
+[2026-08-11T18:12:46.767+0000] {subprocess.py:93} INFO - |7         |29       |F-KAH-01   |Forage Kahi               |34     |10        |1                |Electricite       |0     |0        |
+[2026-08-11T18:12:46.768+0000] {subprocess.py:93} INFO - |8         |17       |F-SIB-02   |Forage Secondaire Sibassor|21     |64        |3                |Solaire           |0     |0        |
+[2026-08-11T18:12:46.770+0000] {subprocess.py:93} INFO - |9         |21       |F-MBD-01   |Forage Mbadakhoune        |25     |32        |3                |Solaire           |0     |0        |
+[2026-08-11T18:12:46.771+0000] {subprocess.py:93} INFO - |10        |25       |F-WNG-01   |Forage Wack Ngouna        |29     |61        |3                |Solaire           |0     |0        |
+[2026-08-11T18:12:46.773+0000] {subprocess.py:93} INFO - |11        |28       |F-DML-01   |Forage Diamal             |33     |1         |3                |Solaire           |0     |0        |
+[2026-08-11T18:12:46.775+0000] {subprocess.py:93} INFO - |12        |20       |F-KSO-01   |Forage Keur Soce          |24     |43        |2                |Groupe Electrogene|0     |0        |
+[2026-08-11T18:12:46.778+0000] {subprocess.py:93} INFO - |13        |24       |F-PAO-01   |Forage Paoscoto           |28     |54        |2                |Groupe Electrogene|0     |0        |
+[2026-08-11T18:12:46.779+0000] {subprocess.py:93} INFO - |14        |30       |F-MHD-01   |Forage Malem Hoddar       |40     |30        |2                |Groupe Electrogene|0     |0        |
+[2026-08-11T18:12:46.781+0000] {subprocess.py:93} INFO - +----------+---------+-----------+--------------------------+-------+----------+-----------------+------------------+------+---------+
+[2026-08-11T18:12:46.787+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:12:46.788+0000] {subprocess.py:93} INFO - DIM_FORAGE créée avec succès
+[2026-08-11T18:12:47.865+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-08-11T18:12:48.396+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-11T18:12:48.405+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=flex_eau_pipeline, task_id=dim_forage, run_id=scheduled__2026-08-10T00:00:00+00:00, execution_date=20260810T000000, start_date=20260811T181010, end_date=20260811T181248
+[2026-08-11T18:12:48.540+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2026-08-11T18:12:48.736+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-08-11T18:12:48.743+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

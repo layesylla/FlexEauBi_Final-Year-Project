@@ -1,0 +1,41 @@
+[2026-07-28T00:36:03.549+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-28T00:36:03.591+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flex_eau_pipeline.dim_usage scheduled__2026-07-26T00:00:00+00:00 [queued]>
+[2026-07-28T00:36:03.609+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flex_eau_pipeline.dim_usage scheduled__2026-07-26T00:00:00+00:00 [queued]>
+[2026-07-28T00:36:03.610+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2026-07-28T00:36:03.646+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): dim_usage> on 2026-07-26 00:00:00+00:00
+[2026-07-28T00:36:03.668+0000] {standard_task_runner.py:72} INFO - Started process 341 to run task
+[2026-07-28T00:36:03.683+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flex_eau_pipeline', 'dim_usage', 'scheduled__2026-07-26T00:00:00+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/flex_eau_pipeline.py', '--cfg-path', '/tmp/tmpqw5cfdkw']
+[2026-07-28T00:36:03.691+0000] {standard_task_runner.py:105} INFO - Job 61: Subtask dim_usage
+[2026-07-28T00:36:03.874+0000] {task_command.py:467} INFO - Running <TaskInstance: flex_eau_pipeline.dim_usage scheduled__2026-07-26T00:00:00+00:00 [running]> on host b1da4d7b7394
+[2026-07-28T00:36:04.209+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='flex-eau' AIRFLOW_CTX_DAG_ID='flex_eau_pipeline' AIRFLOW_CTX_TASK_ID='dim_usage' AIRFLOW_CTX_EXECUTION_DATE='2026-07-26T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-26T00:00:00+00:00'
+[2026-07-28T00:36:04.211+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-28T00:36:04.255+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-28T00:36:04.256+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python spark_jobs/dimensions/dim_usage.py']
+[2026-07-28T00:36:04.278+0000] {subprocess.py:86} INFO - Output:
+[2026-07-28T00:36:19.507+0000] {subprocess.py:93} INFO - 26/07/28 00:36:19 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-07-28T00:36:21.546+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-07-28T00:36:21.548+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-07-28T00:36:25.878+0000] {subprocess.py:93} INFO - 26/07/28 00:36:25 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2026-07-28T00:37:07.902+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 0) / 1]26/07/28 00:37:07 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-07-28T00:37:22.870+0000] {subprocess.py:93} INFO - 26/07/28 00:37:22 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-07-28T00:37:36.147+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 4:>                                                          (0 + 1) / 1]                                                                                Nombre lignes : 8
+[2026-07-28T00:37:36.149+0000] {subprocess.py:93} INFO - +---------+--------+----------+-------------------------+--------+----+-------+
+[2026-07-28T00:37:36.149+0000] {subprocess.py:93} INFO - |usage_key|usage_id|code_usage|type_usage               |tarif_ht|tva |surtaxe|
+[2026-07-28T00:37:36.151+0000] {subprocess.py:93} INFO - +---------+--------+----------+-------------------------+--------+----+-------+
+[2026-07-28T00:37:36.152+0000] {subprocess.py:93} INFO - |0        |1       |BD        |Branchement Domestique   |250.0   |0.0 |0.0    |
+[2026-07-28T00:37:36.153+0000] {subprocess.py:93} INFO - |1        |2       |BF        |Borne Fontaine           |270.0   |48.6|3.25   |
+[2026-07-28T00:37:36.154+0000] {subprocess.py:93} INFO - |2        |3       |AC        |Activite Commerciale     |350.0   |63.0|3.25   |
+[2026-07-28T00:37:36.159+0000] {subprocess.py:93} INFO - |3        |4       |AB        |Abreuvoir                |200.0   |0.0 |0.0    |
+[2026-07-28T00:37:36.161+0000] {subprocess.py:93} INFO - |4        |5       |BC        |Branchement Communautaire|250.0   |0.0 |0.0    |
+[2026-07-28T00:37:36.161+0000] {subprocess.py:93} INFO - |5        |6       |MA        |Maraichage               |200.0   |0.0 |0.0    |
+[2026-07-28T00:37:36.162+0000] {subprocess.py:93} INFO - |6        |7       |UC        |Usage Commercial         |350.0   |63.0|3.25   |
+[2026-07-28T00:37:36.163+0000] {subprocess.py:93} INFO - |7        |8       |PT        |Potence                  |350.0   |63.0|3.25   |
+[2026-07-28T00:37:36.164+0000] {subprocess.py:93} INFO - +---------+--------+----------+-------------------------+--------+----+-------+
+[2026-07-28T00:37:36.165+0000] {subprocess.py:93} INFO - 
+[2026-07-28T00:37:36.166+0000] {subprocess.py:93} INFO - DIM_USAGE créée avec succès
+[2026-07-28T00:37:36.663+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-28T00:37:36.711+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-28T00:37:36.712+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=flex_eau_pipeline, task_id=dim_usage, run_id=scheduled__2026-07-26T00:00:00+00:00, execution_date=20260726T000000, start_date=20260728T003603, end_date=20260728T003736
+[2026-07-28T00:37:36.741+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2026-07-28T00:37:36.790+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-28T00:37:36.800+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

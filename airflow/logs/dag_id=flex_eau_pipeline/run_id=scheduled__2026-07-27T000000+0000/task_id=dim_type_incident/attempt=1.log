@@ -1,0 +1,42 @@
+[2026-07-28T00:47:29.340+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-28T00:47:29.413+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flex_eau_pipeline.dim_type_incident scheduled__2026-07-27T00:00:00+00:00 [queued]>
+[2026-07-28T00:47:29.468+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flex_eau_pipeline.dim_type_incident scheduled__2026-07-27T00:00:00+00:00 [queued]>
+[2026-07-28T00:47:29.470+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2026-07-28T00:47:29.517+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): dim_type_incident> on 2026-07-27 00:00:00+00:00
+[2026-07-28T00:47:29.534+0000] {standard_task_runner.py:72} INFO - Started process 253 to run task
+[2026-07-28T00:47:29.555+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flex_eau_pipeline', 'dim_type_incident', 'scheduled__2026-07-27T00:00:00+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/flex_eau_pipeline.py', '--cfg-path', '/tmp/tmp8ypk1y2r']
+[2026-07-28T00:47:29.564+0000] {standard_task_runner.py:105} INFO - Job 43: Subtask dim_type_incident
+[2026-07-28T00:47:29.746+0000] {task_command.py:467} INFO - Running <TaskInstance: flex_eau_pipeline.dim_type_incident scheduled__2026-07-27T00:00:00+00:00 [running]> on host b97d7a013992
+[2026-07-28T00:47:30.008+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='flex-eau' AIRFLOW_CTX_DAG_ID='flex_eau_pipeline' AIRFLOW_CTX_TASK_ID='dim_type_incident' AIRFLOW_CTX_EXECUTION_DATE='2026-07-27T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-27T00:00:00+00:00'
+[2026-07-28T00:47:30.009+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-28T00:47:30.059+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-28T00:47:30.060+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python spark_jobs/dimensions/dim_type_incident.py']
+[2026-07-28T00:47:30.092+0000] {subprocess.py:86} INFO - Output:
+[2026-07-28T00:47:42.962+0000] {subprocess.py:93} INFO - 26/07/28 00:47:42 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-07-28T00:47:44.233+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-07-28T00:47:44.234+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-07-28T00:47:49.171+0000] {subprocess.py:93} INFO - 26/07/28 00:47:49 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2026-07-28T00:47:49.182+0000] {subprocess.py:93} INFO - 26/07/28 00:47:49 WARN Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+[2026-07-28T00:48:30.581+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 0) / 1]26/07/28 00:48:30 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2026-07-28T00:48:51.600+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 11:>                                                         (0 + 1) / 1]                                                                                Nombre lignes : 9
+[2026-07-28T00:48:51.601+0000] {subprocess.py:93} INFO - +-----------------+-------------------+
+[2026-07-28T00:48:51.602+0000] {subprocess.py:93} INFO - |type_incident_key|type_incident      |
+[2026-07-28T00:48:51.603+0000] {subprocess.py:93} INFO - +-----------------+-------------------+
+[2026-07-28T00:48:51.604+0000] {subprocess.py:93} INFO - |0                |CASSE_CONDUITE     |
+[2026-07-28T00:48:51.604+0000] {subprocess.py:93} INFO - |1                |COUPURE_ELECTRIQUE |
+[2026-07-28T00:48:51.605+0000] {subprocess.py:93} INFO - |2                |PANNE_POMPE        |
+[2026-07-28T00:48:51.606+0000] {subprocess.py:93} INFO - |3                |BAISSE_PRESSION    |
+[2026-07-28T00:48:51.607+0000] {subprocess.py:93} INFO - |4                |PANNE_FORAGE       |
+[2026-07-28T00:48:51.608+0000] {subprocess.py:93} INFO - |5                |COMPTEUR_DEFECTUEUX|
+[2026-07-28T00:48:51.608+0000] {subprocess.py:93} INFO - |6                |FUITE              |
+[2026-07-28T00:48:51.610+0000] {subprocess.py:93} INFO - |7                |RECLAMATION_CLIENT |
+[2026-07-28T00:48:51.611+0000] {subprocess.py:93} INFO - |8                |EAU_TROUBLE        |
+[2026-07-28T00:48:51.612+0000] {subprocess.py:93} INFO - +-----------------+-------------------+
+[2026-07-28T00:48:51.613+0000] {subprocess.py:93} INFO - 
+[2026-07-28T00:48:51.614+0000] {subprocess.py:93} INFO - DIM_TYPE_INCIDENT créée avec succès
+[2026-07-28T00:48:52.125+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-28T00:48:52.184+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-28T00:48:52.186+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=flex_eau_pipeline, task_id=dim_type_incident, run_id=scheduled__2026-07-27T00:00:00+00:00, execution_date=20260727T000000, start_date=20260728T004729, end_date=20260728T004852
+[2026-07-28T00:48:52.242+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2026-07-28T00:48:52.280+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-28T00:48:52.285+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

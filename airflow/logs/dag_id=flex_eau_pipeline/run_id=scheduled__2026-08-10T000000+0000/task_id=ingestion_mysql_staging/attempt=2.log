@@ -1,0 +1,195 @@
+[2026-08-11T18:08:39.006+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-08-11T18:08:39.037+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flex_eau_pipeline.ingestion_mysql_staging scheduled__2026-08-10T00:00:00+00:00 [queued]>
+[2026-08-11T18:08:39.046+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flex_eau_pipeline.ingestion_mysql_staging scheduled__2026-08-10T00:00:00+00:00 [queued]>
+[2026-08-11T18:08:39.047+0000] {taskinstance.py:2856} INFO - Starting attempt 2 of 2
+[2026-08-11T18:08:39.069+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): ingestion_mysql_staging> on 2026-08-10 00:00:00+00:00
+[2026-08-11T18:08:39.079+0000] {standard_task_runner.py:72} INFO - Started process 255 to run task
+[2026-08-11T18:08:39.087+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flex_eau_pipeline', 'ingestion_mysql_staging', 'scheduled__2026-08-10T00:00:00+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/flex_eau_pipeline.py', '--cfg-path', '/tmp/tmpgyvgyy_6']
+[2026-08-11T18:08:39.092+0000] {standard_task_runner.py:105} INFO - Job 53: Subtask ingestion_mysql_staging
+[2026-08-11T18:08:39.183+0000] {task_command.py:467} INFO - Running <TaskInstance: flex_eau_pipeline.ingestion_mysql_staging scheduled__2026-08-10T00:00:00+00:00 [running]> on host b97d7a013992
+[2026-08-11T18:08:39.310+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='flex-eau' AIRFLOW_CTX_DAG_ID='flex_eau_pipeline' AIRFLOW_CTX_TASK_ID='ingestion_mysql_staging' AIRFLOW_CTX_EXECUTION_DATE='2026-08-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-08-10T00:00:00+00:00'
+[2026-08-11T18:08:39.311+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-08-11T18:08:39.331+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-08-11T18:08:39.332+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -e\n        python ingestion/mysql_to_staging.py\n        ']
+[2026-08-11T18:08:39.344+0000] {subprocess.py:86} INFO - Output:
+[2026-08-11T18:09:49.767+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.769+0000] {subprocess.py:93} INFO - ===== regions =====
+[2026-08-11T18:09:49.769+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.93 seconds
+[2026-08-11T18:09:49.770+0000] {subprocess.py:93} INFO - 2 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.770+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.771+0000] {subprocess.py:93} INFO - Load package 1786471728.8358638 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.771+0000] {subprocess.py:93} INFO - Load package 1786471728.8592243 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.772+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.772+0000] {subprocess.py:93} INFO - ===== departements =====
+[2026-08-11T18:09:49.773+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.22 seconds
+[2026-08-11T18:09:49.773+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.773+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.774+0000] {subprocess.py:93} INFO - Load package 1786471733.3319507 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.774+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.775+0000] {subprocess.py:93} INFO - ===== communes =====
+[2026-08-11T18:09:49.775+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.28 seconds
+[2026-08-11T18:09:49.776+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.776+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.777+0000] {subprocess.py:93} INFO - Load package 1786471736.7965302 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.777+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.778+0000] {subprocess.py:93} INFO - ===== sites =====
+[2026-08-11T18:09:49.778+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.25 seconds
+[2026-08-11T18:09:49.779+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.779+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.779+0000] {subprocess.py:93} INFO - Load package 1786471739.573455 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.780+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.780+0000] {subprocess.py:93} INFO - ===== usages =====
+[2026-08-11T18:09:49.781+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.20 seconds
+[2026-08-11T18:09:49.781+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.782+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.782+0000] {subprocess.py:93} INFO - Load package 1786471741.6509953 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.783+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.784+0000] {subprocess.py:93} INFO - ===== sources_energie =====
+[2026-08-11T18:09:49.791+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.19 seconds
+[2026-08-11T18:09:49.803+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.805+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.806+0000] {subprocess.py:93} INFO - Load package 1786471743.718785 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.808+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.809+0000] {subprocess.py:93} INFO - ===== agents =====
+[2026-08-11T18:09:49.811+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.20 seconds
+[2026-08-11T18:09:49.812+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.814+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.816+0000] {subprocess.py:93} INFO - Load package 1786471745.7091696 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.818+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.820+0000] {subprocess.py:93} INFO - ===== usagers =====
+[2026-08-11T18:09:49.822+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.41 seconds
+[2026-08-11T18:09:49.823+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.825+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.826+0000] {subprocess.py:93} INFO - Load package 1786471748.2025318 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.827+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.828+0000] {subprocess.py:93} INFO - ===== abonnes =====
+[2026-08-11T18:09:49.830+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.26 seconds
+[2026-08-11T18:09:49.831+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.833+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.835+0000] {subprocess.py:93} INFO - Load package 1786471751.0976343 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.837+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.839+0000] {subprocess.py:93} INFO - ===== compteurs =====
+[2026-08-11T18:09:49.841+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.24 seconds
+[2026-08-11T18:09:49.842+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.844+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.846+0000] {subprocess.py:93} INFO - Load package 1786471753.7784095 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.848+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.849+0000] {subprocess.py:93} INFO - ===== demandes_abonnement =====
+[2026-08-11T18:09:49.854+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.27 seconds
+[2026-08-11T18:09:49.856+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.859+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.860+0000] {subprocess.py:93} INFO - Load package 1786471756.7643511 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.862+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.863+0000] {subprocess.py:93} INFO - ===== devis_materiel =====
+[2026-08-11T18:09:49.865+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.22 seconds
+[2026-08-11T18:09:49.867+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.870+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.874+0000] {subprocess.py:93} INFO - Load package 1786471759.446896 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.875+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.876+0000] {subprocess.py:93} INFO - ===== releve_compteur =====
+[2026-08-11T18:09:49.877+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.43 seconds
+[2026-08-11T18:09:49.878+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.879+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.880+0000] {subprocess.py:93} INFO - Load package 1786471762.3800712 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.881+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.882+0000] {subprocess.py:93} INFO - ===== factures =====
+[2026-08-11T18:09:49.884+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.35 seconds
+[2026-08-11T18:09:49.885+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.886+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.887+0000] {subprocess.py:93} INFO - Load package 1786471765.2454777 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.888+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.888+0000] {subprocess.py:93} INFO - ===== paiements =====
+[2026-08-11T18:09:49.889+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.26 seconds
+[2026-08-11T18:09:49.890+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.890+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.891+0000] {subprocess.py:93} INFO - Load package 1786471768.453559 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.891+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.892+0000] {subprocess.py:93} INFO - ===== forages =====
+[2026-08-11T18:09:49.892+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.20 seconds
+[2026-08-11T18:09:49.893+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.894+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.895+0000] {subprocess.py:93} INFO - Load package 1786471770.937955 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.895+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.896+0000] {subprocess.py:93} INFO - ===== sessions =====
+[2026-08-11T18:09:49.897+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.24 seconds
+[2026-08-11T18:09:49.898+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.900+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.901+0000] {subprocess.py:93} INFO - Load package 1786471773.0631418 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.902+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.902+0000] {subprocess.py:93} INFO - ===== session_site =====
+[2026-08-11T18:09:49.903+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.27 seconds
+[2026-08-11T18:09:49.904+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.904+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.905+0000] {subprocess.py:93} INFO - Load package 1786471775.8624668 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.906+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.906+0000] {subprocess.py:93} INFO - ===== production =====
+[2026-08-11T18:09:49.907+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.19 seconds
+[2026-08-11T18:09:49.908+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.908+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.909+0000] {subprocess.py:93} INFO - Load package 1786471778.1614587 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.909+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.910+0000] {subprocess.py:93} INFO - ===== consommation_energetique =====
+[2026-08-11T18:09:49.910+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.35 seconds
+[2026-08-11T18:09:49.911+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.911+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.912+0000] {subprocess.py:93} INFO - Load package 1786471780.3081105 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.912+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.913+0000] {subprocess.py:93} INFO - ===== factures_electricite =====
+[2026-08-11T18:09:49.914+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.22 seconds
+[2026-08-11T18:09:49.914+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.915+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.916+0000] {subprocess.py:93} INFO - Load package 1786471783.3904455 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.916+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.917+0000] {subprocess.py:93} INFO - ===== paiements_factures =====
+[2026-08-11T18:09:49.918+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.23 seconds
+[2026-08-11T18:09:49.919+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:09:49.919+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:09:49.920+0000] {subprocess.py:93} INFO - Load package 1786471785.8104556 is LOADED and contains no failed jobs
+[2026-08-11T18:09:49.920+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:09:49.921+0000] {subprocess.py:93} INFO - ===== incidents =====
+[2026-08-11T18:10:08.329+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.24 seconds
+[2026-08-11T18:10:08.330+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:10:08.330+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:10:08.336+0000] {subprocess.py:93} INFO - Load package 1786471788.079433 is LOADED and contains no failed jobs
+[2026-08-11T18:10:08.342+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:10:08.345+0000] {subprocess.py:93} INFO - ===== interventions =====
+[2026-08-11T18:10:08.347+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.39 seconds
+[2026-08-11T18:10:08.349+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:10:08.350+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:10:08.351+0000] {subprocess.py:93} INFO - Load package 1786471790.6225526 is LOADED and contains no failed jobs
+[2026-08-11T18:10:08.353+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:10:08.354+0000] {subprocess.py:93} INFO - ===== moratoires =====
+[2026-08-11T18:10:08.355+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.36 seconds
+[2026-08-11T18:10:08.356+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:10:08.356+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:10:08.357+0000] {subprocess.py:93} INFO - Load package 1786471793.9138722 is LOADED and contains no failed jobs
+[2026-08-11T18:10:08.358+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:10:08.359+0000] {subprocess.py:93} INFO - ===== ordres_coupure =====
+[2026-08-11T18:10:08.360+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.31 seconds
+[2026-08-11T18:10:08.360+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:10:08.361+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:10:08.362+0000] {subprocess.py:93} INFO - Load package 1786471797.796162 is LOADED and contains no failed jobs
+[2026-08-11T18:10:08.362+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:10:08.363+0000] {subprocess.py:93} INFO - ===== ordres_retablissement =====
+[2026-08-11T18:10:08.364+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.38 seconds
+[2026-08-11T18:10:08.365+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:10:08.365+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:10:08.366+0000] {subprocess.py:93} INFO - Load package 1786471800.734572 is LOADED and contains no failed jobs
+[2026-08-11T18:10:08.366+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:10:08.367+0000] {subprocess.py:93} INFO - ===== ordres_resiliation =====
+[2026-08-11T18:10:08.368+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.26 seconds
+[2026-08-11T18:10:08.368+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:10:08.369+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:10:08.370+0000] {subprocess.py:93} INFO - Load package 1786471804.119974 is LOADED and contains no failed jobs
+[2026-08-11T18:10:08.370+0000] {subprocess.py:93} INFO - 
+[2026-08-11T18:10:08.371+0000] {subprocess.py:93} INFO - ===== bons_coupure =====
+[2026-08-11T18:10:08.371+0000] {subprocess.py:93} INFO - Pipeline flex_staging_pipeline load step completed in 0.16 seconds
+[2026-08-11T18:10:08.372+0000] {subprocess.py:93} INFO - 1 load package(s) were loaded to destination postgres and into dataset staging
+[2026-08-11T18:10:08.373+0000] {subprocess.py:93} INFO - The postgres destination used postgresql://postgres:***@postgres-staging:5432/flex_staging location to store data
+[2026-08-11T18:10:08.373+0000] {subprocess.py:93} INFO - Load package 1786471806.8596509 is LOADED and contains no failed jobs
+[2026-08-11T18:10:08.915+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-08-11T18:10:08.966+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-08-11T18:10:08.967+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=flex_eau_pipeline, task_id=ingestion_mysql_staging, run_id=scheduled__2026-08-10T00:00:00+00:00, execution_date=20260810T000000, start_date=20260811T180839, end_date=20260811T181008
+[2026-08-11T18:10:09.025+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2026-08-11T18:10:09.104+0000] {taskinstance.py:3891} INFO - 8 downstream tasks scheduled from follow-on schedule check
+[2026-08-11T18:10:09.111+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

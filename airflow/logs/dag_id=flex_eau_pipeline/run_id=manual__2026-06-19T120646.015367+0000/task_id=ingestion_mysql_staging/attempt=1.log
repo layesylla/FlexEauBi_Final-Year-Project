@@ -1,0 +1,136 @@
+[2026-06-19T12:06:46.830+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-06-19T12:06:46.867+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flex_eau_pipeline.ingestion_mysql_staging manual__2026-06-19T12:06:46.015367+00:00 [queued]>
+[2026-06-19T12:06:46.882+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flex_eau_pipeline.ingestion_mysql_staging manual__2026-06-19T12:06:46.015367+00:00 [queued]>
+[2026-06-19T12:06:46.886+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 1
+[2026-06-19T12:06:46.909+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): ingestion_mysql_staging> on 2026-06-19 12:06:46.015367+00:00
+[2026-06-19T12:06:46.925+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=293) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-06-19T12:06:46.929+0000] {standard_task_runner.py:72} INFO - Started process 294 to run task
+[2026-06-19T12:06:46.924+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flex_eau_pipeline', 'ingestion_mysql_staging', 'manual__2026-06-19T12:06:46.015367+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/flex_eau_pipeline.py', '--cfg-path', '/tmp/tmppwjtjp44']
+[2026-06-19T12:06:46.930+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask ingestion_mysql_staging
+[2026-06-19T12:06:47.052+0000] {task_command.py:467} INFO - Running <TaskInstance: flex_eau_pipeline.ingestion_mysql_staging manual__2026-06-19T12:06:46.015367+00:00 [running]> on host 7614ee4a67ce
+[2026-06-19T12:06:47.280+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='flex_eau_pipeline' AIRFLOW_CTX_TASK_ID='ingestion_mysql_staging' AIRFLOW_CTX_EXECUTION_DATE='2026-06-19T12:06:46.015367+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-19T12:06:46.015367+00:00'
+[2026-06-19T12:06:47.281+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-06-19T12:06:47.311+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-06-19T12:06:47.313+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        cd /opt/project &&         python ingestion/mysql_to_staging.py\n        ']
+[2026-06-19T12:06:47.328+0000] {subprocess.py:86} INFO - Output:
+[2026-06-19T12:06:54.181+0000] {subprocess.py:93} INFO - 
+[2026-06-19T12:06:54.182+0000] {subprocess.py:93} INFO - ===== departements =====
+[2026-06-19T12:06:54.183+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-06-19T12:06:54.184+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dlt/pipeline/pipeline.py", line 832, in _sync_destination
+[2026-06-19T12:06:54.184+0000] {subprocess.py:93} INFO -     remote_state = self._restore_state_from_destination()
+[2026-06-19T12:06:54.185+0000] {subprocess.py:93} INFO -                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-19T12:06:54.186+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dlt/pipeline/pipeline.py", line 1715, in _restore_state_from_destination
+[2026-06-19T12:06:54.187+0000] {subprocess.py:93} INFO -     with self._get_destination_clients(schema)[0] as job_client:
+[2026-06-19T12:06:54.187+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dlt/destinations/job_client_impl.py", line 445, in __enter__
+[2026-06-19T12:06:54.190+0000] {subprocess.py:93} INFO -     self.sql_client.open_connection()
+[2026-06-19T12:06:54.191+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 49, in open_connection
+[2026-06-19T12:06:54.192+0000] {subprocess.py:93} INFO -     self._conn = psycopg2.connect(
+[2026-06-19T12:06:54.193+0000] {subprocess.py:93} INFO -                  ^^^^^^^^^^^^^^^^^
+[2026-06-19T12:06:54.194+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+[2026-06-19T12:06:54.195+0000] {subprocess.py:93} INFO -     conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+[2026-06-19T12:06:54.195+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-19T12:06:54.196+0000] {subprocess.py:93} INFO - psycopg2.OperationalError: connection to server at "localhost" (::1), port 5433 failed: Connection refused
+[2026-06-19T12:06:54.197+0000] {subprocess.py:93} INFO - 	Is the server running on that host and accepting TCP/IP connections?
+[2026-06-19T12:06:54.197+0000] {subprocess.py:93} INFO - connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+[2026-06-19T12:06:54.198+0000] {subprocess.py:93} INFO - 	Is the server running on that host and accepting TCP/IP connections?
+[2026-06-19T12:06:54.198+0000] {subprocess.py:93} INFO - 
+[2026-06-19T12:06:54.199+0000] {subprocess.py:93} INFO - 
+[2026-06-19T12:06:54.200+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2026-06-19T12:06:54.200+0000] {subprocess.py:93} INFO - 
+[2026-06-19T12:06:54.201+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-06-19T12:06:54.202+0000] {subprocess.py:93} INFO -   File "/opt/project/ingestion/mysql_to_staging.py", line 42, in <module>
+[2026-06-19T12:06:54.202+0000] {subprocess.py:93} INFO -     load_info = pipeline.run(
+[2026-06-19T12:06:54.203+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^
+[2026-06-19T12:06:54.204+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dlt/pipeline/pipeline.py", line 231, in _wrap
+[2026-06-19T12:06:54.205+0000] {subprocess.py:93} INFO -     step_info = f(self, *args, **kwargs)
+[2026-06-19T12:06:54.205+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-19T12:06:54.206+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dlt/pipeline/pipeline.py", line 279, in _wrap
+[2026-06-19T12:06:54.207+0000] {subprocess.py:93} INFO -     return f(self, *args, **kwargs)
+[2026-06-19T12:06:54.208+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-19T12:06:54.209+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dlt/pipeline/pipeline.py", line 757, in run
+[2026-06-19T12:06:54.209+0000] {subprocess.py:93} INFO -     self._sync_destination(destination, staging, dataset_name)
+[2026-06-19T12:06:54.210+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dlt/pipeline/pipeline.py", line 184, in _wrap
+[2026-06-19T12:06:54.211+0000] {subprocess.py:93} INFO -     rv = f(self, *args, **kwargs)
+[2026-06-19T12:06:54.211+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-19T12:06:54.212+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dlt/pipeline/pipeline.py", line 938, in _sync_destination
+[2026-06-19T12:06:54.213+0000] {subprocess.py:93} INFO -     raise PipelineStepFailed(self, "sync", None, ex, None) from ex
+[2026-06-19T12:06:54.213+0000] {subprocess.py:93} INFO - dlt.pipeline.exceptions.PipelineStepFailed: Pipeline execution failed at `step=sync` with exception:
+[2026-06-19T12:06:54.214+0000] {subprocess.py:93} INFO - 
+[2026-06-19T12:06:54.214+0000] {subprocess.py:93} INFO - <class 'psycopg2.OperationalError'>
+[2026-06-19T12:06:54.215+0000] {subprocess.py:93} INFO - connection to server at "localhost" (::1), port 5433 failed: Connection refused
+[2026-06-19T12:06:54.216+0000] {subprocess.py:93} INFO - 	Is the server running on that host and accepting TCP/IP connections?
+[2026-06-19T12:06:54.216+0000] {subprocess.py:93} INFO - connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+[2026-06-19T12:06:54.217+0000] {subprocess.py:93} INFO - 	Is the server running on that host and accepting TCP/IP connections?
+[2026-06-19T12:06:54.217+0000] {subprocess.py:93} INFO - 
+[2026-06-19T12:06:55.221+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-06-19T12:06:55.251+0000] {taskinstance.py:3301} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-06-19T12:06:55.260+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=flex_eau_pipeline, task_id=ingestion_mysql_staging, run_id=manual__2026-06-19T12:06:46.015367+00:00, execution_date=20260619T120646, start_date=20260619T120646, end_date=20260619T120655
+[2026-06-19T12:06:55.291+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-06-19T12:06:55.292+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 4 for task ingestion_mysql_staging (Bash command failed. The command returned a non-zero exit code 1.; 294)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2995, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3149, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3173, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-06-19T12:06:55.355+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 1
+[2026-06-19T12:06:55.399+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-06-19T12:06:55.407+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
