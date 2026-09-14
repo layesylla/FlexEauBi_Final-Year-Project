@@ -1,4 +1,4 @@
-# FlexEau BI — Data Engineering and Business Intelligence Platform
+# FlexEau BI - Data Engineering and Business Intelligence Platform
 
 An individual final-year engineering project developed during my professional immersion at **FlexEau Afrique**.
 
